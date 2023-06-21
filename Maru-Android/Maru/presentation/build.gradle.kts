@@ -40,6 +40,9 @@ android {
 }
 
 dependencies {
+
+    implementation ("com.github.PhilJay:MPAndroidChart:3.1.0")
+
     val appCenterSdkVersion = "4.4.5"
 
     implementation("com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}")
