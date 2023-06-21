@@ -12,11 +12,27 @@
         <action
             android:id="@+id/action_homeFragment_to_foodFragment"
             app:destination="@id/foodFragment"
-            app:popUpTo="@id/homeFragment"/>
+            app:popUpTo="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
             android:id="@+id/action_homeFragment_to_healthFragment"
             app:destination="@id/healthFragment"
-            app:popUpTo="@id/homeFragment"/>
+            app:popUpTo="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_homeFragment_to_walkFragment"
+            app:destination="@id/walkFragment"
+            app:popUpTo="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/foodFragment"
@@ -37,4 +53,8 @@
         android:name="com.traveling.presentation.features.onboard.health.HealthFragment"
         android:label="fragment_health"
         tools:layout="@layout/fragment_health" />
+    <fragment
+        android:id="@+id/walkFragment"
+        android:name="com.traveling.presentation.features.main.walk.WalkFragment"
+        android:label="WalkFragment" />
 </navigation>

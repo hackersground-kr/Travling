@@ -7,6 +7,7 @@ import com.traveling.presentation.base.BaseFragment
 import com.traveling.presentation.databinding.FragmentHomeBinding
 import com.traveling.presentation.features.main.home.HomeViewModel.Companion.ON_CLICK_FOOD
 import com.traveling.presentation.features.main.home.HomeViewModel.Companion.ON_CLICK_PROFILE
+import com.traveling.presentation.features.main.home.HomeViewModel.Companion.ON_CLICK_WALK
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -17,6 +18,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
             when (event) {
                 ON_CLICK_FOOD -> findNavController().navigate(R.id.action_homeFragment_to_foodFragment)
                 ON_CLICK_PROFILE -> findNavController().navigate(R.id.action_homeFragment_to_healthFragment)
+                ON_CLICK_WALK -> findNavController().navigate(R.id.action_homeFragment_to_walkFragment)
             }
         }
     }

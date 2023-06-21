@@ -18,9 +18,7 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
 
     private lateinit var adapter: ListFoodAdapter
 
-    override fun observerViewModel() {
-
-    }
+    override fun observerViewModel() {}
 
     override fun onCreateView(
         inflater: LayoutInflater,
