@@ -65,13 +65,13 @@
         <option value="Class" />
         <option value="resourceFile" />
         <option value="valueResourceFile" />
-        <option value="Kotlin File" />
         <option value="Kotlin Object" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="navigationResourceFile" />
         <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -167,6 +167,7 @@
       <recent name="com.example.carretmarket.features" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.traveling.data.util" />
       <recent name="com.example.carretmarket.network.request" />
     </key>
   </component>
