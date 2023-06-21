@@ -30,7 +30,6 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
         val v = super.onCreateView(inflater, container, savedInstanceState)
         initRecyclerView()
         return v
-
     }
 
     private fun initRecyclerView() {
