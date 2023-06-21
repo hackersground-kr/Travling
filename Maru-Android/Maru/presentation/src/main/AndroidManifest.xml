@@ -18,7 +18,7 @@
         <activity
             android:name=".features.onboard.OnBoardActivity"
             android:exported="true"
-            android:label="@string/title_activity_on_board"
+            android:label="onBoard"
             android:theme="@style/Theme.Maru" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
