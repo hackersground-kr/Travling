@@ -1,4 +1,4 @@
-package com.example.maru
+package com.traveling.maru
 
 import org.junit.Test
 

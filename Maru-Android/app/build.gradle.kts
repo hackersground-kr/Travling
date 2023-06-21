@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.maru"
+    namespace = "com.traveling.maru"
 
     defaultConfig {
         compileSdk = 33
