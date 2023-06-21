@@ -10,7 +10,7 @@
         <item name="android:background">@drawable/button</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">16sp</item>
-        <item name="elevation">0dp</item>
+        <item name="android:elevation">0dp</item>
     </style>
     <style name="title">
         <item name="android:textSize">28sp</item>
@@ -25,5 +25,20 @@
         <item name="android:textColor">@color/gray</item>
         <item name="android:layout_marginBottom">@dimen/textTopMargin</item>
         <item name="android:textSize">24sp</item>
+    </style>
+    <style name="level1_button">
+        <item name="android:background">@drawable/level1_button</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <style name="level2_button">
+        <item name="android:background">@drawable/level2_button</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <style name="level3_button">
+        <item name="android:background">@drawable/level3_button</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:textColor">@color/gray</item>
     </style>
 </resources>

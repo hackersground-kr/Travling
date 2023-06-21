@@ -3,7 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-
     <color name="base">#2B90D9</color>
     <color name="gray">#555555</color>
     <color name="gray_light">#AEAEAE</color>
@@ -11,4 +10,7 @@
     <color name="hintColor">#AEAEAE</color>
     <color name="settingText">#000000</color>
     <color name="gray_soLight">#EEEEEE</color>
+    <color name="blue">#2B90D9</color>
+    <color name="yellow">#EFC05E</color>
+    <color name="red">#EF6B73</color>
 </resources>
