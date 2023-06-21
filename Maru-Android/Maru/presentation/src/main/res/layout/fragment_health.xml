@@ -74,8 +74,9 @@
                     android:hint="@string/hintDisease"
                     android:text="@={vm.md1}"
                     android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/text_size"
                     android:paddingLeft="10dp"
-                    android:gravity=""
+                    android:gravity="center|left"
                     android:background="@drawable/editbackground"/>
                 <TextView
                     android:layout_width="wrap_content"
