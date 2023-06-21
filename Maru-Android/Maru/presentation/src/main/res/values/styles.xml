@@ -20,4 +20,10 @@
         <item name="cardCornerRadius">20dp</item>
         <item name="cardElevation">5dp</item>
     </style>
+
+    <style name="drawer">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:layout_marginBottom">@dimen/textTopMargin</item>
+        <item name="android:textSize">24sp</item>
+    </style>
 </resources>

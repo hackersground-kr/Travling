@@ -87,8 +87,29 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-90" />
-                            <option name="y" value="-35" />
+                            <option name="x" value="48" />
+                            <option name="y" value="113" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_healthFragment_to_mdFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="mdFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="230" />
+                            <option name="y" value="79" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -99,8 +120,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="125" />
-                            <option name="y" value="-38" />
+                            <option name="x" value="-135" />
+                            <option name="y" value="125" />
                           </Point>
                         </option>
                         <option name="myPositions">

@@ -17,5 +17,13 @@
         android:id="@+id/healthFragment"
         android:name="com.traveling.presentation.features.onboard.health.HealthFragment"
         android:label="fragment_health"
-        tools:layout="@layout/fragment_health" />
+        tools:layout="@layout/fragment_health" >
+        <action
+            android:id="@+id/action_healthFragment_to_mdFragment"
+            app:destination="@id/mdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mdFragment"
+        android:name="com.traveling.presentation.features.onboard.md.MdFragment"
+        android:label="MdFragment" />
 </navigation>
