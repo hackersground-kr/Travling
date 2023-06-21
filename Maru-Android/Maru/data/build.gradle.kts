@@ -14,6 +14,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    compileSdk = 31
 }
 dependencies {
     implementation ("com.squareup.okhttp3:okhttp:4.10.0")
