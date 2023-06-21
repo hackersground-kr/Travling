@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/onboard_graph"
     app:startDestination="@id/startFragment">
-
-
     <fragment
         android:id="@+id/startFragment"
         android:name="com.traveling.presentation.features.onboard.start.StartFragment"
