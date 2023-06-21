@@ -1,5 +1,6 @@
 package com.traveling.presentation.features.main.home
 
+import androidx.lifecycle.MutableLiveData
 import com.traveling.presentation.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -8,6 +9,7 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
 
 ): BaseViewModel() {
+    val setting = MutableLiveData<Boolean>()
 
     fun onClickFood() {
         viewEvent(ON_CLICK_FOOD)
@@ -20,7 +22,6 @@ class HomeViewModel @Inject constructor(
     fun onClickWalk() {
         viewEvent(ON_CLICK_WALK)
     }
-
 
     companion object {
         const val ON_CLICK_FOOD = 0

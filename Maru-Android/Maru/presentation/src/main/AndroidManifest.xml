@@ -29,5 +29,9 @@
             android:name=".features.main.MainActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".features.detail.DetailActivity"
+            android:exported="false">
+        </activity>
     </application>
 </manifest>

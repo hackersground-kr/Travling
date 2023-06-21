@@ -8,12 +8,11 @@
             name="vm"
             type="com.traveling.presentation.features.onboard.OnBoardViewModel" />
     </data>
-    
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/nav_host_on_board"
+            android:id="@+id/nav_host_main"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"

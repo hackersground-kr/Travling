@@ -10,6 +10,7 @@ import com.microsoft.appcenter.crashes.Crashes
 import com.traveling.presentation.base.BaseActivity
 import com.traveling.presentation.databinding.ActivityOnBoardBinding
 import com.traveling.presentation.features.main.MainActivity
+import com.traveling.presentation.wiget.MaruApplication
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,6 +25,19 @@ class OnBoardActivity : BaseActivity<ActivityOnBoardBinding, OnBoardViewModel>()
             application, "8d2fe31d-c735-47de-acdf-5670ae460cc7",
             Analytics::class.java, Crashes::class.java
         )
+    }
+
+    override fun onStart() {
+        super.onStart()
+        checkFirst()
+    }
+
+    private fun checkFirst() {
+        if (MaruApplication.prefs.isFirst) {
+            MaruApplication.prefs.isFirst = false
+        } else {
+            startMainActivity()
+        }
     }
 
     fun startMainActivity() {

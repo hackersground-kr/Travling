@@ -10,7 +10,7 @@ class ListFoodAdapter(
     private val foodList: List<Food>
 ): RecyclerView.Adapter<ListFoodAdapter.ViewHolder>() {
     inner class ViewHolder(binding: ListFoodBinding): RecyclerView.ViewHolder(binding.root) {
-
+        
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

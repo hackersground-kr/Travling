@@ -8,13 +8,11 @@
             name="vm"
             type="com.traveling.presentation.features.main.MainViewModel" />
     </data>
+
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <include layout="@layout/drawer_main" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -23,9 +21,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/nav_host_on_board" />
+                app:layout_constraintBottom_toTopOf="@id/nav_host_main" />
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/nav_host_on_board"
+                android:id="@+id/nav_host_main"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toBottomOf="@id/tool_bar"
@@ -35,6 +33,13 @@
                 app:defaultNavHost="true"
                 app:navGraph="@navigation/main_graph" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:paddingTop="75dp"
+            android:id="@+id/nav_view"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/drawer_menu" />
     </androidx.drawerlayout.widget.DrawerLayout>
-
 </layout>

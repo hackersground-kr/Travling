@@ -34,7 +34,9 @@ class PreferenceManager(context: Context) {
     var height: String
         get() = prefs.getString(HEIGHT, "").toString()
         set(value) = prefs.edit().putString(HEIGHT, value).apply()
-
+    var isFirst: Boolean
+        get() = prefs.getBoolean(IS_FIRST, true)
+        set(value) = prefs.edit().putBoolean(IS_FIRST, value).apply()
 
 //    fun deleteWalkCount() {
 //        prefs.edit().remove(WALK_COUNT).apply()
@@ -51,5 +53,6 @@ class PreferenceManager(context: Context) {
         const val BLOOD = "BLOOD"
         const val WEIGHT = "WEIGHT"
         const val HEIGHT = "HEIGHT"
+        const val IS_FIRST = "ISFIRST"
     }
 }
