@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/tv_profile"
+                    android:id="@+id/total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
@@ -47,18 +47,127 @@
                     android:textStyle="bold"
                     android:textSize="25dp"/>
                 <TextView
-                    android:id="@+id/tv_profile_detail"
+                    android:id="@+id/walk_count_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/tv_profile"
+                    app:layout_constraintTop_toBottomOf="@id/total"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:gravity="center"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="26dp"
-                    android:text=""
+                    android:text="389,125걸음"
                     android:textColor="@color/gray"
-                    android:textSize="14sp"/>
+                    android:textSize="16sp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/step"
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/alarm"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="@{() -> vm.onClickProfile()}"
+                style="@style/card">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_profile"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:id="@+id/tv_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:text="내 정보"
+                        android:textColor="@color/gray"
+                        android:textStyle="bold"
+                        android:textSize="25dp"/>
+                    <TextView
+                        android:id="@+id/tv_profile_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_profile"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="26dp"
+                        android:text="내 건강정보\n
+ 확인"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="30dp"
+                android:id="@+id/alarm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="@id/profile"
+                app:layout_constraintBottom_toBottomOf="@id/profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/profile"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="10dp"
+                style="@style/card">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/img_alarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_alarm"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:id="@+id/tv_alarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:text="알림"
+                        android:textColor="@color/gray"
+                        android:textStyle="bold"
+                        android:textSize="25dp"/>
+                    <TextView
+                        android:id="@+id/tv_alarm_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_alarm"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="26dp"
+                        android:text="약 먹을 시간\n
+확인하기"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
