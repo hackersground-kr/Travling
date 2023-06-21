@@ -1,5 +1,6 @@
 package com.traveling.presentation.features.onboard.health
 
+import android.os.Bundle
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.traveling.presentation.R
@@ -21,11 +22,15 @@ class HealthFragment : BaseFragment<FragmentHealthBinding, HealthViewModel>() {
                     if (activity is OnBoardActivity) {
                         findNavController().navigate(R.id.action_healthFragment_to_mdFragment)
                     } else if (activity is MainActivity) {
-                        // TODO: save
                         findNavController().popBackStack()
                     }
                 }
             }
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.loadHealth()
     }
 }

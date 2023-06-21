@@ -44,7 +44,6 @@ class HealthViewModel @Inject constructor(
             blood.value= prefs.blood
             weight.value = prefs.weight
             height.value = prefs.height
-
         }
     }
 

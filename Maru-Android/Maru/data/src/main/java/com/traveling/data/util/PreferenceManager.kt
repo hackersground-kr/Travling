@@ -11,28 +11,28 @@ class PreferenceManager(context: Context) {
         get() = prefs.getString(WALK_COUNT, "").toString()
         set(value) = prefs.edit().putString(WALK_COUNT, value).apply()
     var name: String
-        get() = prefs.getString(WALK_COUNT, "").toString()
+        get() = prefs.getString(NAME, "").toString()
         set(value) = prefs.edit().putString(NAME, value).apply()
     var age: String
-        get() = prefs.getString(WALK_COUNT, "").toString()
+        get() = prefs.getString(AGE, "").toString()
         set(value) = prefs.edit().putString(AGE, value).apply()
     var md1: String
-        get() = prefs.getString(WALK_COUNT, "").toString()
+        get() = prefs.getString(MD1, "").toString()
         set(value) = prefs.edit().putString(MD1, value).apply()
     var md2: String
-        get() = prefs.getString(WALK_COUNT, "").toString()
+        get() = prefs.getString(MD2, "").toString()
         set(value) = prefs.edit().putString(MD2, value).apply()
     var md3: String
-        get() = prefs.getString(WALK_COUNT, "").toString()
+        get() = prefs.getString(MD3, "").toString()
         set(value) = prefs.edit().putString(MD3, value).apply()
     var blood: String
-        get() = prefs.getString(WALK_COUNT, "").toString()
+        get() = prefs.getString(BLOOD, "").toString()
         set(value) = prefs.edit().putString(BLOOD, value).apply()
     var weight: String
-        get() = prefs.getString(WALK_COUNT, "").toString()
+        get() = prefs.getString(WEIGHT, "").toString()
         set(value) = prefs.edit().putString(WEIGHT, value).apply()
     var height: String
-        get() = prefs.getString(WALK_COUNT, "").toString()
+        get() = prefs.getString(HEIGHT, "").toString()
         set(value) = prefs.edit().putString(HEIGHT, value).apply()
 
 
