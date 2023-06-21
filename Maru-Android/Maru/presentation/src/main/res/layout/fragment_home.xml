@@ -14,12 +14,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <androidx.cardview.widget.CardView
                 android:layout_marginHorizontal="24dp"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="100dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="120dp"
                 style="@style/card">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -31,10 +32,11 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toTopOf="@id/walk_count"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:textColor="@color/gray"
+                        android:textStyle="bold"
                         android:text="만보기"
-                        android:textSize="26sp"/>
+                        android:textSize="30sp"/>
                     <TextView
                         android:id="@+id/walk_count"
                         android:layout_width="wrap_content"
@@ -42,9 +44,9 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/walk"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:textColor="@color/gray"
-                        android:textSize="32sp"
+                        android:textSize="38sp"
                         android:text="2000"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -52,14 +54,266 @@
                         app:layout_constraintStart_toEndOf="@id/walk_count"
                         app:layout_constraintBottom_toBottomOf="@id/walk_count"
                         android:textColor="@color/gray"
-                        android:textSize="18sp"
+                        android:textSize="22sp"
                         android:text="걸음"/>
-
-
+                    <ImageView
+                        android:id="@+id/img_run"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@id/km"
+                        app:layout_constraintBottom_toBottomOf="@id/km"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_run"
+                        />
+                    <TextView
+                        android:id="@+id/km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/gray"
+                        android:textSize="24sp"
+                        android:text="2.09km"/>
+                    <ImageView
+                        android:id="@+id/img_fire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_fire"
+                        app:layout_constraintEnd_toStartOf="@id/kcal"
+                        app:layout_constraintBottom_toBottomOf="@id/kcal"
+                        android:layout_marginEnd="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/kcal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/km"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray"
+                        android:textSize="24sp"
+                        android:text="88kcal"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/food"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/news"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/card">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/img_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_food"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <TextView
+                            android:id="@+id/tv_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:text="음식"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:id="@+id/tv_food_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_food"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="26dp"
+                            android:text="내 건강에 맞는\n
+음식 찾기"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/news"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="@id/food"
+                    app:layout_constraintBottom_toBottomOf="@id/food"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/food"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/card">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/img_news"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_news"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <TextView
+                            android:id="@+id/tv_news"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:text="뉴스"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:id="@+id/tv_news_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_news"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="26dp"
+                            android:text="오늘의 뉴스를\n
+확인 하기"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/alarm"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/card">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/img_profile"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_profile"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <TextView
+                            android:id="@+id/tv_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:text="내 정보"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:id="@+id/tv_profile_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_profile"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="26dp"
+                            android:text="내 건강정보\n
+ 확인"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/alarm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="@id/profile"
+                    app:layout_constraintBottom_toBottomOf="@id/profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/profile"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/card">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/img_alarm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_alarm"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <TextView
+                            android:id="@+id/tv_alarm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="20dp"
+                            android:text="알림"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold"
+                            android:textSize="25dp"/>
+                        <TextView
+                            android:id="@+id/tv_alarm_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/tv_alarm"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="26dp"
+                            android:text="약 먹을 시간\n
+확인하기"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
