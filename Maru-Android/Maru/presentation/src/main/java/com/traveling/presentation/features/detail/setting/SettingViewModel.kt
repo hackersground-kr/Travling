@@ -8,6 +8,10 @@ import javax.inject.Inject
 class SettingViewModel @Inject constructor(
 
 ): BaseViewModel() {
+    fun onClickBack(){
+        viewEvent(ON_BACK)
+    }
+
     fun onClickNotice() {
         viewEvent(ON_CLICK_NOTICE)
     }
@@ -24,5 +28,6 @@ class SettingViewModel @Inject constructor(
         const val ON_CLICK_NOTICE = 0
         const val ON_CLICK_PRIVATE = 1
         const val ON_CLICK_USE = 2
+        const val ON_BACK = 3
     }
 }

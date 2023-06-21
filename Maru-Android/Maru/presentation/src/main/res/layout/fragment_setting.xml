@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/settingBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -22,7 +22,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            android:onClick="@{() -> vm.onClickBack()}"
+            android:background="@android:color/transparent" />
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/settingTitle"
             android:layout_width="wrap_content"
