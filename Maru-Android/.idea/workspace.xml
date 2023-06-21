@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a0641342-44c0-4342-a05f-88f6299a2f99" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/MainViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/base/BaseResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/datasource/BoardDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/datasource/CommentDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/datasource/LoginDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/datasource/VerifyDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/datasource/impl/BoardDataSourceImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/datasource/impl/CommentDataSourceImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/datasource/impl/LoginDataSourceImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/datasource/impl/VerifyDataSourceImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/mapper/Mapper.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/model/BoardListResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/model/BoardResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/model/CommentResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/model/TokenResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/model/VerifyKeyResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/repository/BoardRepositoryImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/repository/CommentRepositoryImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/repository/LoginRepositoryImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/repository/VerifyRepositoryImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/service/BoardService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/service/CommentService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/service/LoginService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/service/VerifyService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/data/src/main/java/com/example/data/util/PreferenceManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/model/Board.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/model/BoardList.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/model/Chatting.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/model/Comment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/model/Item.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/model/Token.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/model/VerifyKey.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/repository/BoardRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/repository/CommentRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/repository/LoginRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/repository/VerifyRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/request/NewBoardRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/request/NewCommentRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/request/PatchBoardRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/request/RefreshTokenRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/request/SignInRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/request/SignUpRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/board/BoardUseCases.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/board/DeleteBoard.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/board/GetBoard.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/board/GetBoards.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/board/PatchBoard.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/board/PostBoard.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/comment/CommentUseCases.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/comment/DeleteComment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/comment/GetComments.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/comment/PatchComment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/comment/PostComment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/login/Login.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/login/LoginUseCases.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/login/Refresh.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/login/Register.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/verify/GetVerifyKey.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/domain/src/main/java/com/example/domain/usecase/verify/VerifyUseCases.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Maru/presentation/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/base/BaseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/base/BaseActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/base/BaseFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/base/BaseFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/di/DataSourceModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/di/NetworkModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/di/RepositoryModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/di/UseCasesModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/chat/ChatAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/chat/ChatFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/chat/ChatViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/CommunityAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/CommunityFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/CommunityViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/board/BoardFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/board/BoardViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/board/CommentAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/board/patch/PatchFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/board/patch/PatchViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/post/PostingFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/community/post/PostingViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/home/HomeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/home/HomeViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/home/ItemAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/map/MapFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/map/MapViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onboard/OnBoardActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onboard/OnBoardViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onboard/signin/SignInFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onboard/signin/SignInViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onboard/signup/SignUpFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onboard/signup/SignUpViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onboard/signuporin/SignUpOrInFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onboard/signuporin/SignUpOrInViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onmain/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/onmain/MainViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/profile/ProfileFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/features/profile/ProfileViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/network/RetrofitClient.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/util/AdapterManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/util/Base64.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/util/Constant.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/util/RSA.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/util/Token.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/util/VerifyKeyFetcher.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/wiget/CarretApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Maru/presentation/src/main/java/com/example/carretmarket/wiget/CarretApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/activity_on_board.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/activity_on_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_board.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_chatting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_community.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_map.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_patching.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_posting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_sign_in.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_sign_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/fragment_sign_up_or_in.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/list_board.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/list_chat.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/list_comment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/layout/list_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/navigation/on_board_nav_graph.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maru/presentation/src/main/res/navigation/on_main_nav_graph.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/androidTest/java/com/traveling/data/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/test/java/com/traveling/data/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/androidTest/java/com/traveling/domain/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/traveling/domain/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/androidTest/java/com/traveling/presentation/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/test/java/com/traveling/presentation/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/dgsw8th71/.android/avd/Pixel_2_API_29.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RVQ9xWcW3LPCr7ltRg4EDOQhUh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="RunManager" selected="Android App.presentation">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Maru.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="data" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Maru.data.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="domain" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Maru.domain.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="presentation" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Maru.presentation.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0641342-44c0-4342-a05f-88f6299a2f99" name="Changes" comment="" />
+      <created>1687332620864</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687332620864</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
