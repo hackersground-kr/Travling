@@ -3,4 +3,5 @@
     <dimen name="titleSize">30dp</dimen>
     <dimen name="titleMargin">80dp</dimen>
     <dimen name="textLeftMargin">30dp</dimen>
+    <dimen name="textTopMargin">20dp</dimen>
 </resources>

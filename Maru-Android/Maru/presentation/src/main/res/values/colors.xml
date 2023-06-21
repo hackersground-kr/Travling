@@ -13,4 +13,5 @@
     <color name="gray">#555555</color>
     <color name="gray_light">#AEAEAE</color>
     <color name="editbackground">#1ABCBCBC</color>
+    <color name="hintColor">#AEAEAE</color>
 </resources>

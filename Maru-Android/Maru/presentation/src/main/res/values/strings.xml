@@ -2,5 +2,18 @@
     <string name="app_name">Maru</string>
     <string name="title_health">건강 정보</string>
     <string name="text_name">이름</string>
+    <string name="hintName">예) 홍길동</string>
+    <string name="text_age">나이</string>
+    <string name="hintAge">예) 60세</string>
+    <string name="text_disease">의학적 질환</string>
+    <string name="hintDisease">예) 당뇨, 뇌졸증</string>
+    <string name="text_history">의료기록</string>
+    <string name="hintHistory">예) 맹장수술, 인대수술</string>
+    <string name="text_allergy">알레르기 및 약물 부작용</string>
+    <string name="hintAllergy">예) 꽃가루 알레르기, 스테로이드</string>
+    <string name="text_blood">혈액형</string>
+    <string name="hintBlood">O형</string>
+    <string name="text_weight">체중</string>
+    <string name="text_height">키</string>
 
 </resources>

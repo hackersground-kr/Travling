@@ -31,11 +31,142 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
+                    android:layout_marginTop="40dp"
                     android:text="@string/text_name"/>
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:layout_width="300dp"
+                    android:id="@+id/healthName"
+                    android:layout_width="310dp"
                     android:layout_height="60dp"
+                    android:hint="@string/hintName"
+                    android:textColorHint="@color/hintColor"
+                    android:paddingLeft="10dp"
                     android:background="@drawable/editbackground"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/textTopMargin"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/textLeftMargin"
+                    android:text="@string/text_age"/>
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/healthSpinner"
+                    android:layout_width="310dp"
+                    android:layout_height="60dp"
+                    android:text="@string/hintAge"
+
+                    android:background="@drawable/editbackground"/>
+<!--                <androidx.appcompat.widget.AppCompatEditText-->
+<!--                    android:layout_width="310dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:hint="@string/hintAge"-->
+<!--                    android:textColorHint="@color/hintColor"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:background="@drawable/editbackground"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/textTopMargin"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/textLeftMargin"
+                    android:text="@string/text_disease"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/healthDisease"
+                    android:layout_width="310dp"
+                    android:layout_height="60dp"
+                    android:text="@string/hintDisease"
+                    android:textColorHint="@color/hintColor"
+                    android:paddingLeft="10dp"
+                    android:gravity=""
+                    android:background="@drawable/editbackground"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/textTopMargin"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/textLeftMargin"
+                    android:text="@string/text_history"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/healthHistory"
+                    android:layout_width="310dp"
+                    android:layout_height="60dp"
+                    android:hint="@string/hintHistory"
+                    android:textColorHint="@color/hintColor"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/editbackground"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/textTopMargin"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/textLeftMargin"
+                    android:text="@string/text_allergy"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/healthAllergy"
+                    android:layout_width="310dp"
+                    android:layout_height="60dp"
+                    android:hint="@string/hintAllergy"
+                    android:textColorHint="@color/hintColor"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/editbackground"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/textTopMargin"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/textLeftMargin"
+                    android:text="@string/text_blood"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/healthBlood"
+                    android:layout_width="310dp"
+                    android:layout_height="60dp"
+                    android:text="@string/hintBlood"
+                    android:textColorHint="@color/hintColor"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/editbackground"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/textTopMargin"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/textLeftMargin"
+                    android:text="@string/text_weight"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/healthWeight"
+                    android:layout_width="310dp"
+                    android:layout_height="60dp"
+                    android:textColorHint="@color/hintColor"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/editbackground"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/textTopMargin"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/textLeftMargin"
+                    android:text="@string/text_height"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/healthHeight"
+                    android:layout_width="310dp"
+                    android:layout_height="60dp"
+                    android:textColorHint="@color/hintColor"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/editbackground"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/textTopMargin"
+                    style="@style/button"
+                    android:text="확인"/>
+
+
+
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
