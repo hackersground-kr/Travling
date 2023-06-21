@@ -67,10 +67,10 @@
         <option value="valueResourceFile" />
         <option value="Kotlin File" />
         <option value="Kotlin Object" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="navigationResourceFile" />
+        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
       </list>
     </option>
