@@ -8,4 +8,11 @@ import javax.inject.Inject
 class StartViewModel @Inject constructor(
 
 ): BaseViewModel() {
+    fun onClickStart() {
+        viewEvent(ON_CLICK_START)
+    }
+
+    companion object {
+        const val ON_CLICK_START = 0
+    }
 }

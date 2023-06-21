@@ -8,4 +8,12 @@ import javax.inject.Inject
 class HealthViewModel @Inject constructor(
 
 ): BaseViewModel() {
+
+    fun onClickComplete() {
+        viewEvent(ON_CLICK_COMPLETE)
+    }
+
+    companion object {
+        const val ON_CLICK_COMPLETE = 0
+    }
 }

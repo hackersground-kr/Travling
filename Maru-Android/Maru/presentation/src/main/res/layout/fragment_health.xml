@@ -172,12 +172,11 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/textTopMargin"
+                    android:layout_marginBottom="30dp"
                     style="@style/button"
                     android:text="확인"
-                    android:textSize="@dimen/text_size"/>
-
-
-
+                    android:textSize="@dimen/text_size"
+                    android:onClick="@{() -> vm.onClickComplete()}"/>
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
