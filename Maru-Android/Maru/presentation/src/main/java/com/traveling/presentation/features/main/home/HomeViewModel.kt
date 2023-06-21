@@ -23,9 +23,14 @@ class HomeViewModel @Inject constructor(
         viewEvent(ON_CLICK_WALK)
     }
 
+    fun onClickAlarm() {
+        viewEvent(ON_CLICK_ALARM)
+    }
+
     companion object {
         const val ON_CLICK_FOOD = 0
         const val ON_CLICK_PROFILE = 1
         const val ON_CLICK_WALK = 2
+        const val ON_CLICK_ALARM = 3
     }
 }

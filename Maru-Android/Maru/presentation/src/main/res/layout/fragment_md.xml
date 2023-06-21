@@ -44,7 +44,10 @@
                         android:id="@+id/mdMorningHour"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
+                        android:maxLength="2"
                         android:hint="@string/hintTime"
+                        android:inputType="number"
+                        android:text="@={vm.day11}"
                         android:textColorHint="@color/hintColor"
                         android:gravity="center"
                         android:background="@drawable/editbackground"/>
@@ -59,7 +62,11 @@
                         android:id="@+id/mdMorningMin"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
+                        android:text="@={vm.day12}"
                         android:hint="@string/hintTime"
+                        android:inputType="number"
+                        android:maxLength="2"
+
                         android:textColorHint="@color/hintColor"
                         android:gravity="center"
                         android:background="@drawable/editbackground"/>
@@ -80,6 +87,10 @@
                         android:id="@+id/mdLunchHour"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
+                        android:text="@={vm.day21}"
+                        android:inputType="number"
+                        android:maxLength="2"
+
                         android:hint="@string/hintTime"
                         android:textColorHint="@color/hintColor"
                         android:gravity="center"
@@ -96,6 +107,10 @@
                         android:layout_width="40dp"
                         android:layout_height="30dp"
                         android:hint="@string/hintTime"
+                        android:text="@={vm.day22}"
+                        android:inputType="number"
+                        android:maxLength="2"
+
                         android:textColorHint="@color/hintColor"
                         android:gravity="center"
                         android:background="@drawable/editbackground"/>
@@ -116,9 +131,13 @@
                         android:id="@+id/mdDinnerHour"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
+                        android:inputType="number"
+                        android:maxLength="2"
+
                         android:hint="@string/hintTime"
                         android:textColorHint="@color/hintColor"
                         android:gravity="center"
+                        android:text="@={vm.day31}"
                         android:background="@drawable/editbackground"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -131,9 +150,13 @@
                         android:id="@+id/mdDinnerMin"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
+                        android:inputType="number"
+                        android:maxLength="2"
+
                         android:hint="@string/hintTime"
                         android:textColorHint="@color/hintColor"
                         android:gravity="center"
+                        android:text="@={vm.day32}"
                         android:background="@drawable/editbackground"/>
                 </LinearLayout>
                 <androidx.appcompat.widget.AppCompatButton

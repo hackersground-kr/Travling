@@ -37,6 +37,24 @@ class PreferenceManager(context: Context) {
     var isFirst: Boolean
         get() = prefs.getBoolean(IS_FIRST, true)
         set(value) = prefs.edit().putBoolean(IS_FIRST, value).apply()
+    var day11: String
+        get() = prefs.getString(DAY11, "").toString()
+        set(value) = prefs.edit().putString(DAY11, value).apply()
+    var day12: String
+        get() = prefs.getString(DAY12, "").toString()
+        set(value) = prefs.edit().putString(DAY12, value).apply()
+    var day21: String
+        get() = prefs.getString(DAY21, "").toString()
+        set(value) = prefs.edit().putString(DAY21, value).apply()
+    var day22: String
+        get() = prefs.getString(DAY22, "").toString()
+        set(value) = prefs.edit().putString(DAY22, value).apply()
+    var day31: String
+        get() = prefs.getString(DAY31, "").toString()
+        set(value) = prefs.edit().putString(DAY31, value).apply()
+    var day32: String
+        get() = prefs.getString(DAY32, "").toString()
+        set(value) = prefs.edit().putString(DAY32, value).apply()
 
 //    fun deleteWalkCount() {
 //        prefs.edit().remove(WALK_COUNT).apply()
@@ -44,7 +62,9 @@ class PreferenceManager(context: Context) {
 
     companion object {
         const val MARU_APP = "MARU_APP"
+
         const val WALK_COUNT = "WALK_COUNT"
+
         const val NAME = "NAME"
         const val AGE = "AGE"
         const val MD1 = "MD1"
@@ -53,6 +73,14 @@ class PreferenceManager(context: Context) {
         const val BLOOD = "BLOOD"
         const val WEIGHT = "WEIGHT"
         const val HEIGHT = "HEIGHT"
+
         const val IS_FIRST = "ISFIRST"
+
+        const val DAY11 = "DAY11"
+        const val DAY12 = "DAY12"
+        const val DAY21 = "DAY21"
+        const val DAY22 = "DAY22"
+        const val DAY31 = "DAY31"
+        const val DAY32 = "DAY32"
     }
 }
