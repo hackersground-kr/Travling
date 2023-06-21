@@ -25,14 +25,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/titleMargin"
                     android:text="@string/title_health"
-                    android:textSize="@dimen/titleSize" />
+                    android:textSize="@dimen/titleSize"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
                     android:layout_marginTop="40dp"
-                    android:text="@string/text_name"/>
+                    android:text="@string/text_name"
+                    android:textSize="@dimen/text_size"/>
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/healthName"
                     android:layout_width="310dp"
@@ -47,7 +50,8 @@
                     android:layout_marginTop="@dimen/textTopMargin"
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
-                    android:text="@string/text_age"/>
+                    android:text="@string/text_age"
+                    android:textSize="@dimen/text_size"/>
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/healthSpinner"
                     android:layout_width="310dp"
@@ -68,7 +72,8 @@
                     android:layout_marginTop="@dimen/textTopMargin"
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
-                    android:text="@string/text_disease"/>
+                    android:text="@string/text_disease"
+                    android:textSize="@dimen/text_size"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/healthDisease"
@@ -85,7 +90,8 @@
                     android:layout_marginTop="@dimen/textTopMargin"
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
-                    android:text="@string/text_history"/>
+                    android:text="@string/text_history"
+                    android:textSize="@dimen/text_size"/>
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/healthHistory"
@@ -101,7 +107,8 @@
                     android:layout_marginTop="@dimen/textTopMargin"
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
-                    android:text="@string/text_allergy"/>
+                    android:text="@string/text_allergy"
+                    android:textSize="@dimen/text_size"/>
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/healthAllergy"
@@ -117,7 +124,8 @@
                     android:layout_marginTop="@dimen/textTopMargin"
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
-                    android:text="@string/text_blood"/>
+                    android:text="@string/text_blood"
+                    android:textSize="@dimen/text_size"/>
 
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/healthBlood"
@@ -133,7 +141,8 @@
                     android:layout_marginTop="@dimen/textTopMargin"
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
-                    android:text="@string/text_weight"/>
+                    android:text="@string/text_weight"
+                    android:textSize="@dimen/text_size"/>
 
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/healthWeight"
@@ -148,7 +157,8 @@
                     android:layout_marginTop="@dimen/textTopMargin"
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
-                    android:text="@string/text_height"/>
+                    android:text="@string/text_height"
+                    android:textSize="@dimen/text_size"/>
 
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/healthHeight"
@@ -163,7 +173,8 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/textTopMargin"
                     style="@style/button"
-                    android:text="확인"/>
+                    android:text="확인"
+                    android:textSize="@dimen/text_size"/>
 
 
 
