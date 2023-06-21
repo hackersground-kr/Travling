@@ -45,7 +45,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="resourceFile" />
         <option value="valueResourceFile" />
         <option value="Kotlin Object" />
         <option value="Kotlin Data Class" />
@@ -54,6 +53,7 @@
         <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
