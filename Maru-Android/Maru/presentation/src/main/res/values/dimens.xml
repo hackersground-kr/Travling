@@ -6,4 +6,6 @@
     <dimen name="textTopMargin">20dp</dimen>
     <dimen name="text_size">16sp</dimen>
     <dimen name="text_time">20sp</dimen>
+    <dimen name="settingMargin">35dp</dimen>
+    <dimen name="settingArrow">355dp</dimen>
 </resources>

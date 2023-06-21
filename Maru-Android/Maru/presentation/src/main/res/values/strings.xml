@@ -21,5 +21,9 @@
     <string name="text_lunch">점심 약 시간(선택사항)</string>
     <string name="text_dinner">저녁 약 시간(선택사항)</string>
     <string name="title_setting">설정</string>
+    <string name="text_notice">공지사항</string>
+    <string name="text_private">개인정보 처리 방침</string>
+    <string name="text_terms">이용약관</string>
+    <string name="text_version">버전 : 1.0.0</string>
 
 </resources>
