@@ -6,10 +6,11 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/base</item>
     </style>
-    <style name="button">
+    <style name="button" parent="@style/Widget.AppCompat.Button.Borderless">
         <item name="android:background">@drawable/button</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">16sp</item>
+        <item name="elevation">0dp</item>
     </style>
     <style name="title">
         <item name="android:textSize">28sp</item>
