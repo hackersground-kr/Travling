@@ -57,8 +57,6 @@
                     android:id="@+id/healthSpinner"
                     android:layout_width="310dp"
                     android:layout_height="60dp"
-                    android:text="@={vm.age}"
-
                     android:background="@drawable/editbackground"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -128,7 +126,6 @@
                     android:id="@+id/healthBlood"
                     android:layout_width="310dp"
                     android:layout_height="60dp"
-                    android:text="@={vm.blood}"
                     android:textColorHint="@color/hintColor"
                     android:paddingLeft="10dp"
                     android:background="@drawable/editbackground"/>
@@ -146,7 +143,6 @@
                     android:layout_width="310dp"
                     android:layout_height="60dp"
                     android:textColorHint="@color/hintColor"
-                    android:text="@={vm.weight}"
                     android:paddingLeft="10dp"
                     android:background="@drawable/editbackground"/>
                 <TextView
@@ -163,7 +159,6 @@
                     android:layout_width="310dp"
                     android:layout_height="60dp"
                     android:textColorHint="@color/hintColor"
-                    android:text="@={vm.height}"
                     android:paddingLeft="10dp"
                     android:background="@drawable/editbackground"/>
                 <androidx.appcompat.widget.AppCompatButton

@@ -1,6 +1,5 @@
 package com.traveling.presentation.features.onboard.health
 
-import android.os.Bundle
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.traveling.presentation.R
@@ -15,6 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class HealthFragment : BaseFragment<FragmentHealthBinding, HealthViewModel>() {
     override val viewModel: HealthViewModel by viewModels()
     override fun observerViewModel() {
+        viewModel.loadHealth()
         bindingViewEvent {  event ->
             when (event) {
                 ON_CLICK_MD -> {
@@ -27,9 +27,5 @@ class HealthFragment : BaseFragment<FragmentHealthBinding, HealthViewModel>() {
                 }
             }
         }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
     }
 }
