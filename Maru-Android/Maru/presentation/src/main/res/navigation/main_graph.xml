@@ -13,6 +13,10 @@
             android:id="@+id/action_homeFragment_to_foodFragment"
             app:destination="@id/foodFragment"
             app:popUpTo="@id/homeFragment"/>
+        <action
+            android:id="@+id/action_homeFragment_to_healthFragment"
+            app:destination="@id/healthFragment"
+            app:popUpTo="@id/homeFragment"/>
     </fragment>
     <fragment
         android:id="@+id/foodFragment"
@@ -28,4 +32,9 @@
         android:name="com.traveling.presentation.features.main.food.detail.FoodDetailFragment"
         android:label="fragment_food_detail"
         tools:layout="@layout/fragment_food_detail" />
+    <fragment
+        android:id="@+id/healthFragment"
+        android:name="com.traveling.presentation.features.onboard.health.HealthFragment"
+        android:label="fragment_health"
+        tools:layout="@layout/fragment_health" />
 </navigation>

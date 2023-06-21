@@ -12,12 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="242ccf49-3c92-43a6-a0c8-2aab34590d25" name="Changes" comment="so many fixxxxx">
-      <change afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/food/detail/FoodDetailFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/food/detail/FoodDetailViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presentation/src/main/res/drawable/level1_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presentation/src/main/res/drawable/level2_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presentation/src/main/res/drawable/level3_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_food_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/di/UseCasesModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -27,20 +23,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/data/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/util/PreferenceManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/util/PreferenceManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/base/BaseViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/base/BaseViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/home/HomeFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/home/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/home/HomeViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_food.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_food.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/health/HealthFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/health/HealthFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/health/HealthViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/health/HealthViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_health.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_health.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presentation/src/main/res/navigation/main_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/navigation/main_graph.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/dgsw8th13/.android/avd/A31_API_31.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/dgsw8th71/.android/avd/Pixel_2_API_29.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -71,14 +71,14 @@
       <list>
         <option value="Class" />
         <option value="valueResourceFile" />
-        <option value="Kotlin Object" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="navigationResourceFile" />
         <option value="Kotlin File" />
         <option value="layoutResourceFile" />
-        <option value="Kotlin Class" />
         <option value="resourceFile" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -113,11 +113,7 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "git-widget-placeholder": "main",
-<<<<<<< HEAD
     "last_opened_file_path": "/Users/dgsw8th71/Desktop/hack/Travling/Maru-Android/Maru/presentation/src/main/res/drawable",
-=======
-    "last_opened_file_path": "/Users/dgsw8th13/Desktop/hacker/Travling/Maru-Android/Maru/presentation/src/main/res/drawable",
->>>>>>> LKH-ANDROID
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -177,6 +173,8 @@
       <recent name="com.example.carretmarket.features" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.traveling.data.local.dao" />
+      <recent name="com.traveling.data.local" />
       <recent name="com.traveling.data.util" />
       <recent name="com.example.carretmarket.network.request" />
     </key>

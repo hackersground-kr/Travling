@@ -9,8 +9,6 @@ open class BaseViewModel: ViewModel() {
     val viewEvent: LiveData<Any>
         get() = _viewEvent
 
-    val tokenErrorEvent = MutableLiveData<String>()
-
     fun viewEvent(content: Any) {
         _viewEvent.value = content
     }
