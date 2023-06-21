@@ -1,12 +1,18 @@
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+const fs = require('fs');
+
+require('dotenv').config();
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '12345678',
-  database: 'food' // 스키마 이름 변경
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASS,
+  database: process.env.MYSQL_DB,
+  ssl: {
+    ca: fs.readFileSync('./DigiCertGlobalRootCA.crt.pem')
+  }
 });
 
 connection.connect((err) => {
@@ -17,7 +23,6 @@ connection.connect((err) => {
 });
 
 const app = express();
-const port = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -25,12 +30,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/food/:disease/:danger', (req, res) => {
   const disease = req.params.disease;
   const danger = req.params.danger;
-
-  let resDict = {
-    "items": {
-      
-    }
-  }
 
   let tableName;
 
@@ -45,11 +44,11 @@ app.get('/food/:disease/:danger', (req, res) => {
     return;
   }
 
-  const query = `SELECT foodname, foodcontent, foodetc FROM ${tableName} WHERE danger = ${danger}`;
+  const query = `SELECT foodname, foodcontent, foodtype FROM ${tableName} WHERE danger = ${danger}`;
   connection.query(query, (err, result) => {
     if (err) {
       throw err;
-    }
+    } 
 
     if (result.length === 0) {
       res.send('해당 위험도에 대한 음식을 찾을 수 없습니다.');
@@ -59,6 +58,6 @@ app.get('/food/:disease/:danger', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`서버가 http://localhost:${port} 에서 실행 중입니다.`);
+app.listen(process.env.PORT, () => {
+  console.log(`서버가 실행 중입니다.`);
 });
