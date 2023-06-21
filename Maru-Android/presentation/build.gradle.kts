@@ -5,7 +5,6 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
 }
-
 android {
     namespace = "com.traveling.presentation"
 
