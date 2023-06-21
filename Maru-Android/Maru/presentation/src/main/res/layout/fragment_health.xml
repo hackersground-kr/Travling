@@ -25,6 +25,7 @@
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textMargin"
                     android:text="@string/text_name"/>
+                <
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
