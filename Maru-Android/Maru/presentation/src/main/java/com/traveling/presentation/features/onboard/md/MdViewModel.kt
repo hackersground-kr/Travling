@@ -1,11 +1,11 @@
-package com.traveling.presentation.features.main.food
+package com.traveling.presentation.features.onboard.md
 
 import com.traveling.presentation.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class FoodViewModel @Inject constructor(
+class MdViewModel @Inject constructor(
 
 ): BaseViewModel() {
 }

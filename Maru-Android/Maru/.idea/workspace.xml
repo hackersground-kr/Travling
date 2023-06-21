@@ -107,7 +107,7 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/dgsw8th71/Desktop/hack/Travling/Maru-Android/Maru/presentation/src/main/java/com/traveling/presentation/features/onboard/start",
+    "last_opened_file_path": "/Users/dgsw8th71/Desktop/hack/Travling/Maru-Android/Maru/presentation/src/main/res/layout",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -135,9 +135,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/start" />
       <recent name="$PROJECT_DIR$/presentation/src/main/res/layout" />
-      <recent name="$PROJECT_DIR$/presentation/src/main/java/com/example/carretmarket/di" />
+      <recent name="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/drug" />
+      <recent name="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/alarm" />
+      <recent name="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/food" />
+      <recent name="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/walk" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/domain/src/main/java/com/example/domain/model" />

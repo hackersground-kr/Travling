@@ -1,14 +1,14 @@
-package com.traveling.presentation.features.main.home
+package com.traveling.presentation.features.onboard.md
 
 import androidx.fragment.app.viewModels
 import com.traveling.presentation.base.BaseFragment
 import com.traveling.presentation.databinding.FragmentHealthBinding
-import com.traveling.presentation.databinding.FragmentHomeBinding
+import com.traveling.presentation.databinding.FragmentMdBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
-    override val viewModel: HomeViewModel by viewModels()
+class MdFragment : BaseFragment<FragmentMdBinding, MdViewModel>() {
+    override val viewModel: MdViewModel by viewModels()
     override fun observerViewModel() {
 
     }

@@ -2,13 +2,13 @@ package com.traveling.presentation.features.main.news
 
 import androidx.fragment.app.viewModels
 import com.traveling.presentation.base.BaseFragment
-import com.traveling.presentation.databinding.FragmentHealthBinding
 import com.traveling.presentation.databinding.FragmentHomeBinding
+import com.traveling.presentation.databinding.FragmentNewsBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
-    override val viewModel: HomeViewModel by viewModels()
+class NewsFragment : BaseFragment<FragmentNewsBinding, NewsViewModel>() {
+    override val viewModel: NewsViewModel by viewModels()
     override fun observerViewModel() {
 
     }
