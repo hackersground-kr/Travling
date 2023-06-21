@@ -176,7 +176,7 @@
                     style="@style/button"
                     android:text="확인"
                     android:textSize="@dimen/text_size"
-                    android:onClick="@{() -> vm.onClickComplete()}"/>
+                    android:onClick="@{() -> vm.onClickMd()}"/>
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

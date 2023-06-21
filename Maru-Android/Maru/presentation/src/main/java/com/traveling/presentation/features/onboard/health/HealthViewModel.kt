@@ -9,11 +9,11 @@ class HealthViewModel @Inject constructor(
 
 ): BaseViewModel() {
 
-    fun onClickComplete() {
-        viewEvent(ON_CLICK_COMPLETE)
+    fun onClickMd() {
+        viewEvent(ON_CLICK_MD)
     }
 
     companion object {
-        const val ON_CLICK_COMPLETE = 0
+        const val ON_CLICK_MD = 0
     }
 }
