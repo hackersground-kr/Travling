@@ -32,7 +32,9 @@
                     android:layout_gravity="left"
                     android:layout_marginLeft="@dimen/textLeftMargin"
                     android:text="@string/text_name"/>
-                <
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"/>
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

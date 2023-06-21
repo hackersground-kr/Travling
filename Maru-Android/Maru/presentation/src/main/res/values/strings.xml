@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Maru</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
     <string name="title_health">건강 정보</string>
     <string name="text_name">이름</string>
 </resources>
