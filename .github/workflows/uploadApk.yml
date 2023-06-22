@@ -33,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: android-apk
-        path: /home/runner/work/Travling/Travling/Maru-Android/Maru/presentation/build/outputs/apk/presentation-release-unsigned.apk
+        path: /home/runner/work/Travling/Travling/Maru-Android/Maru/presentation/build/outputs/apk/release/presentation-release-unsigned.apk
