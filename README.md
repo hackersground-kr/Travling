@@ -130,8 +130,8 @@
         8. Ok를 누른 후, DB 서버를 클릭하여 접속을 확인해요
         9. food DB의 Tables에서 오른쪽 클릭하여 Create Table을 눌러요
         10. Name은 dm으로 설정해요.
-        11. <click to edit> 을 클릭 후 id를 입력하고, PK NM AI 체크를 표시해요
-        12. 아래의 <click to edit>을 눌러 새로운 칼럼을 추가하고 danger를 추가해요
+        11. click to edit 을 클릭 후 id를 입력하고, PK NN AI 체크를 표시해요
+        12. 아래의 click to edit 을 눌러 새로운 칼럼을 추가하고 danger를 추가해요
         13. danger의 데이터 타입을 INT로 설정해요
         14. 이러한 방법으로 데이터 타입이 TEXT인 칼럼 
             
