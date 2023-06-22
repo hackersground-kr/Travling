@@ -31,4 +31,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: Maru-Android
-        path: ./build
+        path: Maru-Android/build
