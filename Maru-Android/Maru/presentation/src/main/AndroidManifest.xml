@@ -29,7 +29,6 @@
         <activity
             android:name=".features.onboard.OnBoardActivity"
             android:exported="true"
-            android:label="onBoard"
             android:theme="@style/Theme.Maru" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

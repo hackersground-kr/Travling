@@ -13,7 +13,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Maru"
+rootProject.name = "Marubestswlkh0310"
 include ':presentation'
 include ':domain'
 include ':data'

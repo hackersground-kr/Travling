@@ -2,6 +2,7 @@ package com.traveling.presentation.features.onboard.health
 
 import androidx.lifecycle.MutableLiveData
 import com.traveling.presentation.base.BaseViewModel
+import com.traveling.presentation.features.main.food.FoodViewModel.Companion.ON_CLICK_MD
 import com.traveling.presentation.wiget.MaruApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -10,6 +11,14 @@ import javax.inject.Inject
 class HealthViewModel @Inject constructor(
 
 ): BaseViewModel() {
+
+    val diseaseMap = MutableLiveData(
+        hashMapOf(
+            "고혈압" to false,
+            "당뇨" to false,
+            "심근경색" to false
+        )
+    )
 
     val name = MutableLiveData<String>()
     val age = MutableLiveData<String>()
@@ -44,6 +53,10 @@ class HealthViewModel @Inject constructor(
             blood.value= prefs.blood
             weight.value = prefs.weight
             height.value = prefs.height
+
+            md1.value!!.split(",").map {
+                diseaseMap.value!![it] = true
+            }
         }
     }
 

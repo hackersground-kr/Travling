@@ -1,5 +1,6 @@
 package com.traveling.presentation.features.onboard.health.dialog
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +12,10 @@ import com.traveling.presentation.features.onboard.health.HealthClickListener
 
 class DiseaseAdapter(
     private var list: List<String>,
-    private var clickListenr: HealthClickListener
+    private var diseaseMap: HashMap<String, Boolean>,
 ): RecyclerView.Adapter<DiseaseAdapter.ViewHolder>() {
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    val TAG: String = "로그"
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var checkBox: CheckBox
         init { checkBox = view.findViewById(R.id.md_btn) }
     }
@@ -25,9 +27,11 @@ class DiseaseAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.checkBox.text = list[position]
-        holder.checkBox.setOnCheckedChangeListener { _, _ ->
-            clickListenr.checkBoxCheckChange(holder.checkBox.text as String, holder.checkBox)
+        holder.checkBox.setOnCheckedChangeListener { _, check ->
+            diseaseMap[list[position]] = check
+            Log.d(TAG, "DiseaseAdapter - onBindViewHolder() called")
         }
+        holder.checkBox.isChecked = diseaseMap[list[position]]!!
     }
 
     override fun getItemCount() = list.size
