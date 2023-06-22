@@ -48,11 +48,11 @@
 
 ## 제품 아키텍처 (이미지)
 
-제품 이미지 확인하기 : (클릭)[https://github.com/hackersground-kr/Travling/tree/main/images]
+제품 이미지 확인하기 : [클릭](https://github.com/hackersground-kr/Travling/tree/main/images)
 
 ## 제품 소개 슬라이드
 
-제품 소개 슬라이드 확인하기 : (클릭)[https://github.com/hackersground-kr/Travling/blob/main/decks/%E1%84%86%E1%85%A1%E1%84%85%E1%85%AE.pptx]
+제품 소개 슬라이드 확인하기 : [클릭](https://github.com/hackersground-kr/Travling/blob/main/decks/%E1%84%86%E1%85%A1%E1%84%85%E1%85%AE.pptx)
 
 ## 제품 소개 동영상
 
