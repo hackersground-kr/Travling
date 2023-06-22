@@ -173,13 +173,13 @@
             -> ex) o | creare new table | food | hbp
         31. Next를 눌러요 Next를 눌러요 Next를 눌러요 Next를 눌러요 Finish를 눌러요
         32. 위와 같은 방식으로 user_mi.json를 데이터 베이스에 저장해요
-            -> dm 테이블 오른쪽을 클릭하여 Table Data Import Wizard를 눌러요
-            -> Browse를 누르고 압춘 푼 데이터 베이스 폴더에서 user_mi.json을 선택해요
-            --> 안보인다면 위에와 같은 방법으로 해결하세요
-            -> Next를 눌러주세요
-            ->Create new table을 누르고 food DB를 선택후 mi를 입력하세요
-            --> ex) o | creare new table | food | mi
-            -> Next를 눌러요 Next를 눌러요 Next를 눌러요 Next를 눌러요 Finish를 눌러요
+            -> dm 테이블 오른쪽을 클릭하여 Table Data Import Wizard를 눌러요 <br>
+            -> Browse를 누르고 압춘 푼 데이터 베이스 폴더에서 user_mi.json을 선택해요 <br>
+            --> 안보인다면 위에와 같은 방법으로 해결하세요 <br>
+            -> Next를 눌러주세요 <br>
+            ->Create new table을 누르고 food DB를 선택후 mi를 입력하세요 <br>
+            --> ex) o | creare new table | food | mi <br>
+            -> Next를 눌러요 Next를 눌러요 Next를 눌러요 Next를 눌러요 Finish를 눌러요 <br>
 
     > **웹 앱 (Web App) 에 백엔드 코드 업로드하기
     (백엔드 배포하기)**
