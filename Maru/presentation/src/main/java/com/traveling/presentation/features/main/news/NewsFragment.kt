@@ -11,5 +11,6 @@ class NewsFragment : BaseFragment<FragmentNewsBinding, NewsViewModel>() {
     override val viewModel: NewsViewModel by viewModels()
     override fun observerViewModel() {
 
+
     }
 }
