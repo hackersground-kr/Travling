@@ -3,7 +3,7 @@ package com.traveling.domain.usecase
 import com.traveling.domain.repository.NewsRepository
 import javax.inject.Inject
 
-class GetNews(
+class GetNews @Inject constructor(
     private val newsRepository: NewsRepository
 ) {
 
