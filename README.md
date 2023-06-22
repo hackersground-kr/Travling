@@ -146,7 +146,7 @@
     4. Connection Name에는 원하는 이름을 적어요
     5. Hostname에 (DB 서버 이름).mysql.database.azure.com을 적어요
     6. Username에 DB 서버의 서버 관리자 로그인 이름을 적어요
-    7. Password는 DB 서버를 만들 때 사용했던 비밀번호를 입력해요
+    7. Password는 Store in keychain을 누른 후 DB 서버를 만들 때 사용했던 비밀번호를 입력해요
     8. Ok를 누른 후, DB 서버를 클릭하여 접속을 확인해요
     9. food DB의 Tables에서 오른쪽 클릭하여 Create Table을 눌러요
     10. Name은 dm으로 설정해요.
