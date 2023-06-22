@@ -32,13 +32,13 @@
                 android:id="@+id/startCheck"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:layout_marginTop="10dp"
-                android:text="이용약관에 동의하기"/>
+                android:layout_marginTop="20dp"
+                android:text="이용 약관에 동의하기"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/startBtn"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
                 style="@style/button"
                 android:text="시작하기"

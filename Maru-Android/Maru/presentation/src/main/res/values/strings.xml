@@ -33,7 +33,7 @@
     <string name="title_time">12 : 31</string>
     <string name="text_date">6월 21일 수요일</string>
     <string name="text_heal">의료정보 확인</string>
-    <string name="lock_pass">넘어가기</string>
+    <string name="lock_pass">닫기</string>
     <string name="title_heal">의료정보</string>
     <string name="text_realname">이름 : 양예성</string>
     <string name="text_realage">만 16세</string>

@@ -1,17 +1,11 @@
 package com.traveling.presentation.features.main.food.detail
 
-import android.view.View
-import android.widget.Toolbar
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.traveling.presentation.R
 import com.traveling.presentation.base.BaseFragment
 import com.traveling.presentation.databinding.FragmentFoodDetailBinding
-import com.traveling.presentation.features.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
