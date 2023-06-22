@@ -13,7 +13,7 @@ jobs:
     
     defaults:
       run :
-        working-directory: ./Maru-Android
+        working-directory: ./Maru-Android/Maru
 
     steps:
     - uses: actions/checkout@v3
@@ -26,11 +26,11 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: assembleRelease with Gradle
-      run: ./gradlew assembleRelease
+    - name: Build with Gradle
+      run: ./gradlew build
       
     - name: Upload apk
       uses: actions/upload-artifact@v3
       with:
         name: android-apk
-        path: /home/runner/work/Travling/Travling/Maru-Android/app/build/outputs/apk/release/app-release-unsinged.apk
+        path: /home/runner/work/Travling/Travling/Maru-Android/Maru/presentation/build/outputs/apk/release/presentation-release-unsigned.apk

@@ -13,7 +13,7 @@ jobs:
     
     defaults:
       run :
-        working-directory: ./MyApplication
+        working-directory: ./Maru-Android/Maru
 
     steps:
     - uses: actions/checkout@v3
@@ -35,6 +35,6 @@ jobs:
         appName: Maru
         token: ${{secrets.APP_CENTER_TOKEN}}
         group: Traveling
-        file: /home/runner/work/Travling/Travling/MyApplication/app/build/outputs/apk/release/app-release-unsigned.apk
+        file: /home/runner/work/Travling/Travling/Maru-Android/Maru/presentation/build/outputs/apk/release/presentation-release-unsigned.apk
         notifyTesters: true
         debug: true
