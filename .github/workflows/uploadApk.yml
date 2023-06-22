@@ -13,7 +13,7 @@ jobs:
     
     defaults:
       run :
-        working-directory: ./Maru-Android
+        working-directory: ./MyApplication
 
     steps:
     - uses: actions/checkout@v3
@@ -33,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: android-apk
-        path: /home/runner/work/Travling/Travling/Maru-Android/app/build/outputs/apk/release/app-release-unsinged.apk
+        path: /home/runner/work/Travling/Travling/MyApplication/app/build/outputs/apk/release/app-release-unsinged.apk
