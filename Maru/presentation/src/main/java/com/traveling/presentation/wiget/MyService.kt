@@ -49,6 +49,7 @@ class MyService : Service(), SensorEventListener {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         showNotification()
         if (stepCountSensor != null) {
+            Log.d("LOG", "onStartCommand:rr")
             // 센서 속도 설정
             // * 옵션
             // - SENSOR_DELAY_NORMAL: 20,000 초 딜레이
@@ -142,7 +143,6 @@ class MyService : Service(), SensorEventListener {
             if (event.values[0] == 1.0f) {
                 // 센서 이벤트가 발생할때 마다 걸음수 증가
                 currentSteps++
-                MaruApplication.prefs
 
                 Log.d("LOGS", "onSensorChanged: $currentSteps")
 //                stepCountView!!.text = currentSteps.toString()
