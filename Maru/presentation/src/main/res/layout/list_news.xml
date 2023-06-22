@@ -3,11 +3,12 @@
     <data>
         <variable
             name="vm"
-            type="com.traveling.presentation.features.main.news.ListNewsViewModel" />
+            type="com.traveling.presentation.features.main.news.ListNewsViewModel"
+        />
     </data>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="80dp">
         <LinearLayout
             android:id="@+id/news_lay"
             android:layout_width="match_parent"

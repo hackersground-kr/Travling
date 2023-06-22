@@ -2,6 +2,7 @@ package com.traveling.presentation.di
 
 import com.google.gson.GsonBuilder
 import com.traveling.data.service.FoodService
+import com.traveling.data.service.NewService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,6 +27,11 @@ object NetworkModule {
     @Provides
     fun provideFoodService(retrofit: Retrofit): FoodService =
         retrofit.create(FoodService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideNewsService(retrofit: Retrofit): NewService =
+        retrofit.create(NewService::class.java)
 
     @Singleton
     @Provides

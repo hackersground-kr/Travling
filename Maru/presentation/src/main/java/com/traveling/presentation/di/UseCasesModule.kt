@@ -1,8 +1,11 @@
 package com.traveling.presentation.di
 
 import com.traveling.domain.repository.FoodRepository
+import com.traveling.domain.repository.NewsRepository
 import com.traveling.domain.usecase.FoodUsecases
 import com.traveling.domain.usecase.GetFoods
+import com.traveling.domain.usecase.GetNews
+import com.traveling.domain.usecase.NewsUsecases
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,4 +21,10 @@ object UseCasesModule {
     fun provideFoodUsecases(foodRepository: FoodRepository) = FoodUsecases(
         GetFoods(foodRepository)
     )
+    @Singleton
+    @Provides
+    fun provideNewsUsecases(newsRepository: NewsRepository) = NewsUsecases(
+        GetNews(newsRepository)
+    )
+
 }

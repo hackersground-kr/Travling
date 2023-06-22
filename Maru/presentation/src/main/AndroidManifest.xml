@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
     <uses-permission android:name="android.permission.SERVICE" />
     <uses-permission android:name="android.permission.BODY_SENSORS" />
+
+    <uses-permission android:name="android.permission.SET_ALARM" />
     <application
         android:name=".wiget.MaruApplication"
         android:allowBackup="true"
@@ -47,5 +49,9 @@
             android:name=".features.detail.DetailActivity"
             android:exported="false">
         </activity>
+        <receiver
+            android:name=".wiget.AlarmScheduler$AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 </manifest>

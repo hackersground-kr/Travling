@@ -62,10 +62,15 @@ class HomeViewModel @Inject constructor(
         viewEvent(ON_CLICK_ALARM)
     }
 
+    fun onClickNews() {
+        viewEvent(ON_CLICK_NEWS)
+    }
+
     companion object {
         const val ON_CLICK_FOOD = 0
         const val ON_CLICK_PROFILE = 1
         const val ON_CLICK_WALK = 2
         const val ON_CLICK_ALARM = 3
+        const val ON_CLICK_NEWS = 4
     }
 }

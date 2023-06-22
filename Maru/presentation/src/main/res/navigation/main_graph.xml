@@ -41,6 +41,13 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/foodFragment"
@@ -94,4 +101,8 @@
         android:id="@+id/mdFragment"
         android:name="com.traveling.presentation.features.onboard.md.MdFragment"
         android:label="MdFragment" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.traveling.presentation.features.main.news.NewsFragment"
+        android:label="NewsFragment" />
 </navigation>
