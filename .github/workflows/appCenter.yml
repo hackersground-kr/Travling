@@ -13,7 +13,7 @@ jobs:
     
     defaults:
       run :
-        working-directory: ./MyApplication
+        working-directory: ./Maru-Android/Maru
 
     steps:
     - uses: actions/checkout@v3
