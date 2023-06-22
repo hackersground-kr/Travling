@@ -2,9 +2,9 @@ name: Build and Upload APK
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "LKH-ANDROID" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "LKH-ANDROID" ]
 
 jobs:
   build:
