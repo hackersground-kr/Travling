@@ -1,7 +1,7 @@
 package com.traveling.domain.model
 
-data class Food(
-    var id: Int,
-    var title: String,
-    var detail: String
+data class Item(
+    val foodcontent: String,
+    val foodname: String,
+    val foodtype: String
 )
