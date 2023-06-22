@@ -8,4 +8,5 @@
     <dimen name="text_time">20sp</dimen>
     <dimen name="settingMargin">35dp</dimen>
     <dimen name="settingArrow">355dp</dimen>
+    <dimen name="titleLock">60sp</dimen>
 </resources>
