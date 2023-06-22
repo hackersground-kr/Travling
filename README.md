@@ -136,20 +136,22 @@
         14. 이러한 방법으로 데이터 타입이 TEXT인 칼럼 
             
             → 뒤에 () 는 지우세요
+            -> ex) TEXT() = X
+            ->     TEXT = O
             
             foodname, foodcontent, foodtype을 생성해요
             
-        15. 아래의 Apply 버튼을 누르고 다시 누르고, Close를 눌러요
-        16. 생성된 dm 테이블을 오른쪽 클릭하여 Table Data Import Wizard를 눌러요
-        17. Browse를 클릭하여 압축 푼 데이터베이스 폴더에서 user_dm.json을 선택해요
-        18. Use existing table을 누르고 food.dm을 클릭해요
-        19. Next를 누르고 다시 Next를 누르고 다시 눌러야 해요
-        20. Next를 누르고 Finish를 눌러요
-        21. 요소를 불러온 dm 테이블을 오른쪽 클릭하여 Table Data Import Wizard를 눌러요
-        22. Browse를 누르고 압춘 푼 데이터 베이스 폴더에서 user_hbp.json을 선택해요
-        23. Create new table을 누르고 food DB를 선택후 hbp를 입력해요
-        24. Next를 눌러요 Next를 눌러요 Next를 눌러요 Next를 눌러요 Finish를 눌러요
-        25. 위 방식으로 user_mi.json를 데이터 베이스에 저장해요
+        16. 아래의 Apply 버튼을 누르고 다시 누르고, Close를 눌러요
+        17. 생성된 dm 테이블을 오른쪽 클릭하여 Table Data Import Wizard를 눌러요
+        18. Browse를 클릭하여 압축 푼 데이터베이스 폴더에서 user_dm.json을 선택해요
+        19. Use existing table을 누르고 food.dm을 클릭해요
+        20. Next를 누르고 다시 Next를 누르고 다시 눌러야 해요
+        21. Next를 누르고 Finish를 눌러요
+        22. 요소를 불러온 dm 테이블을 오른쪽 클릭하여 Table Data Import Wizard를 눌러요
+        23. Browse를 누르고 압춘 푼 데이터 베이스 폴더에서 user_hbp.json을 선택해요
+        24. Create new table을 누르고 food DB를 선택후 hbp를 입력해요
+        25. Next를 눌러요 Next를 눌러요 Next를 눌러요 Next를 눌러요 Finish를 눌러요
+        26. 위 방식으로 user_mi.json를 데이터 베이스에 저장해요
     
     > **웹 앱 (Web App) 에 백엔드 코드 업로드하기
     (백엔드 배포하기)**
