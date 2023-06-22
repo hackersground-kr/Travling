@@ -1,6 +1,6 @@
-package com.traveling.presentation.features.onboard.health.dialog
+package com.traveling.presentation.features.main.food.dialog
 
 import com.traveling.presentation.base.BaseViewModel
 
-class DiseaseViewModel: BaseViewModel() {
+class FoodViewModel: BaseViewModel() {
 }

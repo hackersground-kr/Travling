@@ -1,4 +1,4 @@
-package com.traveling.presentation.features.onboard.health.dialog
+package com.traveling.presentation.features.main.food.dialog
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,11 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.traveling.presentation.R
 import com.traveling.presentation.features.onboard.health.HealthClickListenr
 
-
-class DiseaseAdapter(
+class FoodAdapter(
     private var list: List<String>,
     private var clickListenr: HealthClickListenr
-): RecyclerView.Adapter<DiseaseAdapter.ViewHolder>() {
+): RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var checkBox: CheckBox
         init { checkBox = view.findViewById(R.id.disease_checkBox) }

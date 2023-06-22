@@ -16,14 +16,16 @@ class ListFoodAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(ListFoodBinding.inflate(LayoutInflater.from(parent.context), parent, false)).apply {
-            itemView.setOnClickListener {
+            /*itemView.setOnClickListener {
                 val curPos: Int = adapterPosition
                 val food: Food = foodList[curPos]
-            }
+            }*/
         }
     }
 
     override fun getItemCount() = foodList.size
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.title.text = foodList[position].foodname
+        holder.detail.text = foodList[position].foodcontent
     }
 }

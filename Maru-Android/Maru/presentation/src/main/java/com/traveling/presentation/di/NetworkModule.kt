@@ -21,6 +21,7 @@ import javax.net.ssl.X509TrustManager
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
     @Singleton
     @Provides
     fun provideFoodService(retrofit: Retrofit): FoodService =
@@ -57,7 +58,7 @@ object NetworkModule {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient, gsonConverterFactory: GsonConverterFactory): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://maru-webapp.azurewebsites.net")
+            .baseUrl("https://maru-webapp.azurewebsites.net/")
             .client(okHttpClient)
             .addConverterFactory(gsonConverterFactory)
             .build()

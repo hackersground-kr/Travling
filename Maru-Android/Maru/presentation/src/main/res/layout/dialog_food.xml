@@ -3,7 +3,7 @@
     <data>
         <variable
             name="vm"
-            type="com.traveling.presentation.features.onboard.health.dialog.DiseaseViewModel"></variable>
+            type="com.traveling.presentation.features.main.food.dialog.FoodViewModel"></variable>
     </data>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"

@@ -1,5 +1,6 @@
 package com.traveling.presentation.features.main.food
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.traveling.domain.model.Food
@@ -17,15 +18,27 @@ class FoodViewModel @Inject constructor(
     val foods = MutableLiveData<List<Food>>()
     val state = MutableLiveData<String>()
 
-    private val foodList = arrayListOf<Food>()
+    init {
+        state.value = "1"
+        foods.value = arrayListOf()
+    }
+
+    val foodList = arrayListOf<Food>()
 
     fun loadFoods(type: String) {
         viewModelScope.launch(Dispatchers.IO) {
-             foods.value = foodUsecase.getFoods(type, getIdx(state.value!!))
+            val type = getType(type)
+            val idx = state.value.toString()
+            Log.d("로그", "${type} :: ${idx} - loadFoods() called")
+            val a = foodUsecase.getFoods(type, idx)
+            for (i in a) {
+                Log.d("로그", "$i - loadFoods() called")
+            }
+            foods.postValue(a)
         }
     }
 
-    private fun getIdx(str: String): String {
+    private fun getType(str: String): String {
         if (str == "당뇨") {
             return "dm"
         } else if (str == "심근경색") {

@@ -47,7 +47,6 @@ dependencies {
     implementation("com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}")
     implementation("com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}")
 
-
     val nav_version = "2.5.3"
 
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
