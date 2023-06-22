@@ -34,6 +34,8 @@
 3. 인터넷이 연결된 PC 또는 랩탑
 4. vscode 설치
 5. vscode Extension Azure 설치
+6. 구글
+   
 
 ## 시작하기
 
@@ -48,7 +50,7 @@
         1. https://azure.microsoft.com/ko-kr/ 에 접속하여 **구독이 있는 계정**으로 로그인해요
         2. Azure 서비스 탭에서 리소스 만들기를 클릭해요
         3. 웹 앱 만들기를 선택해요
-        4. 알맞는 리소스 그룹을 선택해요 (만들어요)
+        4. 알맞는 리소스 그룹을 선택하세요 (리소스 그룹에 화살표를 눌러 선택 하세요)
         5. 웹 앱을 원하는 이름으로 정해줘요
             
             예) hackersground
@@ -58,18 +60,25 @@
         8. 운영체제는 리눅스를 선택해요
         9. 지역은 Korea Central을 선택해요
         10. 리눅스 플랜은 신규로 설정합니다 (플랜은 우선 가만히 두어요)
-        11. 배포와 네트워킹, 모니터링 등 건너뛰어 검토 + 만들기를 클릭합니다
-        12. 유효성 검사에서 통과되면 만들기를 클릭합니다
-        13. 배포 완료되는 것을 확인합니다
+        12. 왼쪽 하단에 검토 + 만들기를 클릭합니다. 없으면 찾아서라도 클릭하세요
+        13. 유효성 검사에서 통과되면 만들기를 클릭합니다
+        14. 배포 완료되는 것을 확인합니다
     
     > **MySQL 유동 서버 생성하기
     (Azure Database for MySQL Flexible Server)**
     - Step by Step
         1. Azure 서비스 탭에서 리소스 만들기를 눌러요
+           -> https://portal.azure.com/#create/hub 이겁니다 눌러요.
         2. MySQL 유동 서버 만들기를 선택해요
+           -> 못 찾겠음 검색을 하세요.
+           -> Azure Database for MySQL Flexible Server 이거 검색 하시면 됩니다.
+           -> 젤 처음꺼 들어가세요
+           -> 이것도 안되면 그냥 이거 클릭 하세요. [클릭](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/Microsoft.MySQLFlexibleServer/selectionMode~/false/resourceGroupId//resourceGroupLocation//dontDiscardJourney~/false/selectedMenuId/home/launchingContext~/%7B%22galleryItemId%22%3A%22Microsoft.MySQLFlexibleServer%22%2C%22source%22%3A%5B%22GalleryFeaturedMenuItemPart%22%2C%22VirtualizedTileDetails%22%5D%2C%22menuItemId%22%3A%22home%22%2C%22subMenuItemId%22%3A%22Search%20results%22%2C%22telemetryId%22%3A%22e98d196f-7bd0-4a3c-ad43-582cde621a7d%22%7D/searchTelemetryId/ded83fe8-949f-4894-a25c-39b5499539c4/isLiteSearchFlowEnabled~/false)
         3. 보기 관리와 함께 있는 만들기를 클릭해요
+           -> 플랜 하나밖에 없지만 선택하세요.
         4. 유연한 서버 (Flexible Server)를 선택해요
-        5. 알맞는 리소스 그룹을 선택해요 (만들어요)
+        5. 알맞는 리소스 그룹을 선택해요
+           -> 있을꺼에요 아까 해봤죠 경험을 살려서 다시 해봅시다.
         6. 기억하기 좋은 서버 이름을 지어요
             
             예) hackersground-db
@@ -77,40 +86,63 @@
         7. 지역을 Korea Central로 선택해요
         8. MySQL 버전 8.0을 선택해요
         9. 인증 방법은 MySQL 인증만을 클릭해요
+            -> 하단으로 내리다 보면 있습니다.
+            -> 인증방법이라는 HTML radio 칸 처럼 된거 그거 클릭하세요.
         10. 관리자 사용자 이름을 원하는 것으로 정해요
             
             예) hackers01
             
         11. 암호는 조건에 맞추어 정해요
+            -> 조건 꼭 맞춰 주세요.
         12. 아래 워크로드 유형 등을 건너뛰어요
-        13. 네트워킹에서
+        13. 다음 네트워킹을 누르세요
+            -> 하단에 있어요 잘 찾아보세요.
+        14. 네트워킹에서
             
             Azure 내의 모든 Azure 서비스의 이 서버에 대한 퍼블릭 액세스 허용
             
             를 선택해요
+            -> 퍼블릭 액세스(허용된 IP 주소) 라는거 클릭 하세요
             
-        14. 현재 클라이언트 IP 주소 추가를 클릭해요
-        15. 보안과 태그 등 탭을 건너뛰어서 검토 + 만들기를 클릭해요
-        16. 유효성 검사에 성공한다면 만들기를 클릭해요
-        17. 배포가 완료되는 것을 확인합니다.
+        15. 현재 클라이언트 IP 주소 추가를 클릭해요
+        16. 검토 + 만들기를 클릭해요
+            -> 왼쪽 하단에 있습니다. 아까도 해봤죠
+        17. 유효성 검사에 성공한다면 만들기를 클릭해요
+        18. 배포가 완료되는 것을 확인합니다.
+        19. 만약 배포가 안되었다면 다시 한번 해보세요!
+            -> 만약 그래도 배포가 안되었다면 구글을 한번 써봅시다.
+            -> 배포오류 메시지를 구글에 검색창에 검색을 한 뒤 알맞은 자료를 골라 정독을 하세요.
+            -> 안에 내용에 맞추어 오류를 고치세요
     
 > **웹 앱 (Web App) 에 백엔드 코드 업로드하기**
 > 
 - Step by Step
-    1. [여기를 클릭](https://github.com/hackersground-kr/Travling/releases/download/1.0.1/Maru-Backend.zip)하여 백엔드 소스코드를 다운받아요
-    2. .env 파일의 빈 변수들에
+    1. VScode를 실행하세요.
+    2. [여기를 클릭](https://github.com/hackersground-kr/Travling/releases/download/1.0.1/Maru-Backend.zip)하여 백엔드 소스코드를 다운받아요
+    3. 소스코드의 압축을 해제하세요
+    4. VScode로 압축이 해제된 폴더를 찾아서 열어주세요
+    6. 폴더안 .env 파일의 빈 변수들에
         1. MYSQL_HOST에 (DB 서버 이름).mysql.database.azure.com
         2. MYSQL_USER에 DB 유저 네임을
         3. MYSQL_PASS에 DB 비밀번호를 입력해요
-    3. VS Code 앱을 실행해요
-    4. 확장(Extension) 에서 Azure Tools를 검색 후 설치해요
-    5. Azure Tools에서 웹 앱, DB 서버가 있는 계정으로 로그인을 해요
-    6. VS Code의 작업 표시줄에서 Azure 탭을 클릭해요
-    7. 구독 폴더를 열어 App Services 폴더 또한 연 후,
+        4. 그다음 왼쪽 상단의 파일 -> 저장을 클릭해요
+    8. 왼쪽의 목록중 확장(Extension) 에서 Azure Tools를 검색 후 설치해요
+    9. 설치 한뒤 뜨는 창은 꺼줍니다.
+    10. 왼쪽의 Azure 로고를 클릭해서 안의 내용중 Sign in to Azure 를 클릭하여 웹 앱, DB 서버가 있는 계정으로 로그인을 해요
+    11. VS Code의 작업 표시줄에서 Azure 탭을 클릭해요
+    12. 열쇠모양 옆 화살표를 클릭한 뒤 App Services 폴더 또한 마찬가지로 연 후,
         
-        생성한 웹 앱을 오른쪽 마우스를 클릭 해 Deploy to Web App을 클릭해요
-        
-        이후 표시되는 팝업창은 모두 Yes로 표시해주어요.
+        생성한 웹 앱의 제목을 오른쪽 마우스를 클릭 해 Deploy to Web App을 클릭해요
+        그다음 뜨는 창에서 Maru-Backend를 클릭해요
+    13. https://portal.azure.com/#home 에 들어가서 보이는 처음 웹앱 생성하기에서 정한 이름의 프로젝트를 클릭합니다.
+    14. 오른쪽 기본도메인이라 적힌 url을 복사합니다. 잘 보관하세요
+  
+
+
+
+
+## 안드로이드
+
 
 1. 위에 과정에서 얻은 url을 가져온다.
 2. [링크](https://github.com/hackersground-kr/Travling/archive/refs/heads/LKH-ANDROID.zip) 를 클릭하여 해당 파일을 다운한다. 그후 압축을 해제한다.
