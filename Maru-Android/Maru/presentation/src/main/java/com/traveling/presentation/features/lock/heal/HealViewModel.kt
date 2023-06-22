@@ -20,14 +20,14 @@ class HealViewModel @Inject constructor()
 
     fun loadHeal() {
         with(MaruApplication) {
-            name.value = prefs.name
-            age.value = prefs.age
-            md1.value = prefs.md1
-            md2.value = prefs.md2
-            md3.value = prefs.md3
-            blood.value= prefs.blood
-            weight.value = prefs.weight
-            height.value = prefs.height
+            name.value = "이름 : ${prefs.name}"
+            age.value = "나이 : 만 ${prefs.age} 세"
+            md1.value = "의학적 질환 : ${prefs.md1}"
+            md2.value = "의료 기록 : ${prefs.md2}"
+            md3.value = "알레르기 : ${prefs.md3}"
+            blood.value= "혈액형 : ${prefs.blood}형"
+            weight.value = "체중 : ${prefs.weight} kg"
+            height.value = "신장 : ${prefs.height} kg"
         }
     }
     fun onClickBack() {

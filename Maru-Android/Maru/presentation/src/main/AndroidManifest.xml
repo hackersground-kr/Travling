@@ -4,7 +4,10 @@
     package="com.traveling.presentation">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
         android:name=".wiget.MaruApplication"
         android:allowBackup="true"
@@ -15,6 +18,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Maru"
         tools:targetApi="31">
+        <service
+            android:name=".wiget.MyService"
+            android:enabled="true"
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW"
+            android:exported="false" />
+        <activity android:name=".features.lock.LockActivity"
+            android:exported="true"
+            android:showOnLockScreen="true"/>
         <activity
             android:name=".features.onboard.OnBoardActivity"
             android:exported="true"
