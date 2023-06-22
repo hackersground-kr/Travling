@@ -16,10 +16,10 @@ class HomeViewModel @Inject constructor(
     var calories = MutableLiveData<String>()
 
     fun loadData() {
-        var wos: Int = if (MaruApplication.prefs.walkCount == "") { 0 } else {  MaruApplication.prefs.walkCount.toInt()}
-        work.postValue(wos.toString())
-        distance.postValue(calculateDistance(wos))
-        calories.postValue(calculateCalories(wos))
+        var time: Int = if (MaruApplication.prefs.walkCount == "") { 0 } else {  MaruApplication.prefs.walkCount.toInt()}
+        work.postValue(time.toString())
+        distance.postValue(calculateDistance(time))
+        calories.postValue(calculateCalories(time))
     }
     fun calculateDistance(steps: Int): String {
         // 걸음 수에 따른 이동 거리 계산 (1만걸음 = 5킬로미터)
