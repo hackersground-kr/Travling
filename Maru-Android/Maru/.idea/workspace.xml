@@ -12,6 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="242ccf49-3c92-43a6-a0c8-2aab34590d25" name="Changes" comment="so many fixxxxx">
+      <change afterPath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/repository/FoodRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/traveling/domain/repository/FoodRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/traveling/domain/usecase/FoodUsecases.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/traveling/domain/usecase/GetFoods.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/di/NetworkModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/di/RepositoryModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -20,10 +26,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/util/PreferenceManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/util/PreferenceManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/md/MdFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/md/MdFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/md/MdViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/md/MdViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_md.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_md.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/service/FoodService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/service/FoodService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/util/Mapper.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/util/PreferenceManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/com/traveling/data/PreferenceManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/di/UseCasesModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/di/UseCasesModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/food/ListFoodAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/food/ListFoodAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/wiget/MaruApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/wiget/MaruApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_food.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/layout/fragment_food.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/src/main/res/layout/list_food.xml" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/src/main/res/layout/list_food.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +71,13 @@
       <list>
         <option value="Class" />
         <option value="valueResourceFile" />
-        <option value="Kotlin Interface" />
         <option value="Kotlin File" />
-        <option value="Kotlin Object" />
         <option value="Kotlin Data Class" />
         <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="navigationResourceFile" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -150,11 +160,11 @@
       <recent name="com.example.carretmarket.view.activity" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.traveling.data" />
       <recent name="com.traveling.presentation.features.main.food" />
       <recent name="com.traveling.presentation.features.main" />
       <recent name="com.example.data.datasource.impl" />
       <recent name="com.example.data.model" />
-      <recent name="com.example.data.service" />
     </key>
     <key name="android.template.901522947">
       <recent name="com.example.carretmarket.view.activity" />

@@ -1,4 +1,5 @@
 package com.traveling.domain.usecase
 
-class FoodUsecases {
-}
+data class FoodUsecases (
+    val getFoods: GetFoods
+)

@@ -1,7 +1,7 @@
 package com.traveling.presentation.wiget
 
 import android.app.Application
-import com.traveling.data.util.PreferenceManager
+import com.traveling.data.PreferenceManager
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp

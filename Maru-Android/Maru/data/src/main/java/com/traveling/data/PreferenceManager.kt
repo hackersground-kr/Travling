@@ -1,4 +1,4 @@
-package com.traveling.data.util
+package com.traveling.data
 
 import android.content.Context
 import android.content.SharedPreferences

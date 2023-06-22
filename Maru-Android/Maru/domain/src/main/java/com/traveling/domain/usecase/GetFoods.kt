@@ -1,4 +1,10 @@
 package com.traveling.domain.usecase
 
-class GetFoods {
+import com.traveling.domain.repository.FoodRepository
+import javax.inject.Inject
+
+class GetFoods @Inject constructor(
+    private val foodRepository: FoodRepository
+) {
+    suspend operator fun invoke(type: String, idx: Int) = foodRepository.getFoods(type, idx)
 }
