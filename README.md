@@ -113,25 +113,17 @@
  5.5 여기서 sdk 오류로인해  설치에 실패했다면, **local.properties** 파일을 수정한다. (자신의 sdk가 설치된 곳)
 
 1. 오른쪽 위 밑의 사진처럼 생긴 gradle 설치버튼을 누른다.
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8e042a4-ead2-4175-ad86-9560965c0356/Untitled.png)
-    
-2. 그후 아래의 사진처럼 생긴 것중 망치모양 버튼을 누른다.
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f04ccdc0-fb2a-4368-9fb8-065bcab86cc2/Untitled.png)
+2. 그후 상단의 것중 망치모양 버튼을 누른다.
 
 1. 모두 눌렀다면 presentation/java/com/traveling/presentation/di/NetworkModule 파일을 더블클릭한다.
 2. 그 후 61번쨰 줄의 url을 **1번의 URL**로 변경한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/99d437ca-ce70-4464-b8fe-cad893c82179/Untitled.png)
 
 1. 그후 상단의 빌드 버튼을 누르고 Build Bundle(s) / APK(s)에 마우스를 갖다대고 Build apk(s)를 누른다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6f6f3f25-df1c-4ede-a404-b6016490b658/Untitled.png)
     
-    1. 그후 조금 기다렸다가 뜨는 아래사진에서 locate버튼을 누른다. 그리고 안의 presentation-debug.apk파일의 위치를 기억한다.
+    1. 그후 조금 기다렸다가 뜨는 오른쪽 아래에서 locate버튼을 누른다. 그리고 안의 presentation-debug.apk파일의 위치를 기억한다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/26ce5eaf-b024-4917-ae00-9077284f2345/Untitled.png)
     
     1. https://appcenter.ms/ 사이트에 접속한다. 
     2. 페이지에서 보이는 Sing In 버튼을 클릭한다.
