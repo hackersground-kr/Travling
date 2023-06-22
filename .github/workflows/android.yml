@@ -20,16 +20,16 @@ jobs:
         
     - name: Create local.properties with SDK location
       run: |
-        echo "sdk.dir=$ANDROID_SDK_ROOT" > ./android/local.properties
-        echo "BASE_URL=\"${{ secrets.BASE_URL }}\"" >> ./android/local.properties
-        echo "SECRET_KEY=\"${{ secrets.SECRET_KEY }}\"" >> ./android/local.properties
+        echo "sdk.dir=$ANDROID_SDK_ROOT" > ./Maru-Android/Maru/local.properties
+        echo "BASE_URL=\"${{ secrets.BASE_URL }}\"" >> ../Maru-Android/Maru/local.properties
+        echo "SECRET_KEY=\"${{ secrets.SECRET_KEY }}\"" >>./Maru-Android/Maru/local.properties
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
-      working-directory: ./android
+      working-directory: ./Maru-Android/Maru
     
     - name: Build Debug APK
       run: ./gradlew assembleDebug
-      working-directory: ./android
+      working-directory: ./Maru-Android/Maru
 
     - name: Upload APK to Artifacts
       uses: actions/upload-artifact@v2
