@@ -8,4 +8,5 @@ import javax.inject.Inject
 class WalkViewModel @Inject constructor(
 
 ): BaseViewModel() {
+//    val walkCount = Muatabl
 }

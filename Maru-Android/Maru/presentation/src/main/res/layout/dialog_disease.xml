@@ -1,44 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="vm"
-            type="com.traveling.presentation.features.onboard.health.dialog.DiseaseViewModel"></variable>
+            type="com.traveling.presentation.features.onboard.health.dialog.DiseaseViewModel"/>
     </data>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/level1_button"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/title_desease"
-            android:textSize="@dimen/titleSize"
-            android:textColor="@color/black"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/disease_rv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:orientation="horizontal">
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="150dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/title_desease"
+                android:textSize="27sp"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/disease_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/title"/>
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="60dp"
-                android:text="@string/disease_no"
-                android:background="@color/gray_soLight"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="150dp"
-                android:layout_height="60dp"
-                android:text="@string/disease_yes"
-                android:background="@color/blue"/>
-        </LinearLayout>
-
-
-    </LinearLayout>
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/disease_rv"
+                app:layout_constraintStart_toStartOf="@id/disease_rv"
+                app:layout_constraintEnd_toEndOf="@id/disease_rv"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/disease_no_btn"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="@string/disease_no"
+                    android:background="@color/gray_soLight"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/disease_yes_btn"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:text="@string/disease_yes"
+                    android:background="@color/blue"
+                    style="@style/button"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </layout>

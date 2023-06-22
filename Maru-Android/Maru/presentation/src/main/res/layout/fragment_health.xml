@@ -53,11 +53,15 @@
                     android:layout_marginLeft="@dimen/textLeftMargin"
                     android:text="@string/text_age"
                     android:textSize="@dimen/text_size"/>
-                <androidx.appcompat.widget.AppCompatSpinner
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/healthAge"
+                    android:hint="예) 20세"
+                    android:paddingLeft="10dp"
+                    android:text="@={vm.age}"
+                    android:textColorHint="@color/hintColor"
                     android:layout_width="310dp"
                     android:layout_height="60dp"
-                    android:background="@drawable/editbackground"/>
+                    android:background="@drawable/editbackground" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -72,9 +76,9 @@
                     android:layout_width="310dp"
                     android:layout_height="60dp"
                     android:hint="@string/hintDisease"
-                    android:text="@={vm.md1}"
                     android:textColorHint="@color/hintColor"
                     android:textSize="@dimen/text_size"
+                    android:text="@={vm.md1}"
                     android:paddingLeft="10dp"
                     android:gravity="center|left"
                     android:background="@drawable/editbackground"/>
@@ -111,6 +115,7 @@
                     android:layout_height="60dp"
                     android:hint="@string/hintAllergy"
                     android:text="@={vm.md3}"
+
                     android:textColorHint="@color/hintColor"
                     android:paddingLeft="10dp"
                     android:background="@drawable/editbackground"/>
@@ -123,12 +128,14 @@
                     android:text="@string/text_blood"
                     android:textSize="@dimen/text_size"/>
 
-                <androidx.appcompat.widget.AppCompatSpinner
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/healthBlood"
                     android:layout_width="310dp"
                     android:layout_height="60dp"
-                    android:textColorHint="@color/hintColor"
+                    android:hint="예) A"
+                    android:text="@={vm.blood}"
                     android:paddingLeft="10dp"
+                    android:textColorHint="@color/hintColor"
                     android:background="@drawable/editbackground"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -139,10 +146,12 @@
                     android:text="@string/text_weight"
                     android:textSize="@dimen/text_size"/>
 
-                <androidx.appcompat.widget.AppCompatSpinner
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/healthWeight"
                     android:layout_width="310dp"
                     android:layout_height="60dp"
+                    android:hint="예) 70"
+                    android:text="@={vm.weight}"
                     android:textColorHint="@color/hintColor"
                     android:paddingLeft="10dp"
                     android:background="@drawable/editbackground"/>
@@ -155,12 +164,14 @@
                     android:text="@string/text_height"
                     android:textSize="@dimen/text_size"/>
 
-                <androidx.appcompat.widget.AppCompatSpinner
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/healthHeight"
                     android:layout_width="310dp"
                     android:layout_height="60dp"
-                    android:textColorHint="@color/hintColor"
+                    android:hint="예) 177"
+                    android:text="@={vm.height}"
                     android:paddingLeft="10dp"
+                    android:textColorHint="@color/hintColor"
                     android:background="@drawable/editbackground"/>
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="200dp"

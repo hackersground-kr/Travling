@@ -1,12 +1,14 @@
 package com.traveling.presentation.features.onboard.health
 
-import android.os.Bundle
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.AdapterView.OnItemClickListener
+import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
-import android.widget.CheckBox
+import android.widget.TextView
 import androidx.appcompat.widget.AppCompatSpinner
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -17,16 +19,21 @@ import com.traveling.presentation.features.main.MainActivity
 import com.traveling.presentation.features.onboard.OnBoardActivity
 import com.traveling.presentation.features.onboard.health.HealthViewModel.Companion.ON_CLICK_MD
 import com.traveling.presentation.features.onboard.health.dialog.DiseaseDialog
+import com.traveling.presentation.wiget.MaruApplication
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HealthFragment : BaseFragment<FragmentHealthBinding, HealthViewModel>(), HealthClickListener {
+class HealthFragment : BaseFragment<FragmentHealthBinding, HealthViewModel>() {
+
+    val TAG: String = "로그"
     override val viewModel: HealthViewModel by viewModels()
-    private lateinit var checkList :MutableList<String>
-    private val test = mapOf("당뇨" to "dm", "고혈압" to "hbp", "심근경색" to "mi")
+
     override fun observerViewModel() {
-        setinitSpiner()
-        setinitDialog()
+        viewModel.loadHealth()
+//        initSpinner()
+        setInitDialog()
+        Log.d(TAG, "${viewModel.md1.value} - observerViewModel() called")
+
         bindingViewEvent {  event ->
             when (event) {
                 ON_CLICK_MD -> {
@@ -40,49 +47,81 @@ class HealthFragment : BaseFragment<FragmentHealthBinding, HealthViewModel>(), H
         }
     }
 
-    private fun setinitDialog() {
-
+    private fun setInitDialog() {
         mBinding.healthDisease.setOnClickListener {
-            checkList = mutableListOf()
-            DiseaseDialog(requireContext(), test, this).show()
+            val dialog = DiseaseDialog(requireContext(), viewModel.diseaseMap.value!!, object: OnClickOkListener {
+                override fun onClick() {
+                    val resultStr = viewModel.diseaseMap.value!!.entries.filter { it.value }
+                        .joinToString(",") { it.key }
+                    Log.d("로그", "$resultStr - onClick() called")
+                    mBinding.healthDisease.text = resultStr
+                    MaruApplication.prefs.md1 = resultStr
+                }
+            })
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.show()
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val v = super.onCreateView(inflater, container, savedInstanceState)
-        viewModel.loadHealth()
-        return v
+    /*private fun initSpinner() {
+        // TODO 함수로 빼기
+        setIntSpinner(mBinding.healthAge, (1..90).toList(),
+            object : OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                    MaruApplication.prefs.age = (view as? TextView)?.text.toString()
+                }
+                override fun onNothingSelected(parent: AdapterView<*>?) {}
+            })
+        setStringSpinner(mBinding.healthBlood, listOf("A", "B", "AB", "O", "RH+", "RH-"),
+            object : OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                    MaruApplication.prefs.blood = (view as? TextView)?.text.toString()
+                }
+                override fun onNothingSelected(parent: AdapterView<*>?) {}
+            })
+        setIntSpinner(mBinding.healthWeight, (1..90).toList(),
+            object : OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                    MaruApplication.prefs.weight = (view as? TextView)?.text.toString()
+                }
+                override fun onNothingSelected(parent: AdapterView<*>?) {}
+            })
+        setIntSpinner(mBinding.healthHeight, (30..200).toList(),
+            object : OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                    MaruApplication.prefs.height = (view as? TextView)?.text.toString()
+                }
+                override fun onNothingSelected(parent: AdapterView<*>?) {}
+            })
     }
 
-    private fun setinitSpiner() {
-        setIntSpinner(mBinding.healthAge, (1..90).toList())
-        setStrSpinner(mBinding.healthBlood, listOf("A", "B", "AB", "O"))
-        setIntSpinner(mBinding.healthWeight, (1..90).toList())
-        setIntSpinner(mBinding.healthHeight, (30..200).toList())
-    }
     private fun setIntSpinner(spinner: AppCompatSpinner, data: List<Int>) {
-        val addpter = ArrayAdapter<Int>(requireContext(), R.layout.spinner, data)
-        addpter.setDropDownViewResource(R.layout.spinner_selected)
-        spinner.adapter = addpter
-    }
-    private fun setStrSpinner(spinner: AppCompatSpinner, data: List<String>) {
-        val addpter = ArrayAdapter<String>(requireContext(), R.layout.spinner, data)
-        addpter.setDropDownViewResource(R.layout.spinner_selected)
-        spinner.adapter = addpter
+        val adapter = ArrayAdapter(requireContext(), R.layout.spinner, data)
+        adapter.setDropDownViewResource(R.layout.spinner_selected)
+        spinner.adapter = adapter
     }
 
-    override fun checkBoxCheckChange(name: String, checkBox: CheckBox) {
-        Log.d("LOG", "checkBoxCheckChange: ${name}")
-        if (checkBox.isChecked) {
-            checkList.add(name)
-        } else {
-            checkList.remove(name)
-        }
-        mBinding.healthDisease.text = checkList.toString().replace("[", "").replace("]", "")
-//        Log.d("LOG", "checkBoxCheckChange: ${checkList.toString().replace("[", "").replace("]", "")}")
+    private fun setIntSpinner(spinner: AppCompatSpinner, data: List<Int>, save: OnItemSelectedListener) {
+        val adapter = ArrayAdapter(requireContext(), R.layout.spinner, data)
+        adapter.setDropDownViewResource(R.layout.spinner_selected)
+        spinner.adapter = adapter
+        spinner.onItemSelectedListener = save
+    }
+
+    private fun setStringSpinner(spinner: AppCompatSpinner, data: List<String>) {
+        val adapter = ArrayAdapter(requireContext(), R.layout.spinner, data)
+        adapter.setDropDownViewResource(R.layout.spinner_selected)
+        spinner.adapter = adapter
+    }
+
+    private fun setStringSpinner(spinner: AppCompatSpinner, data: List<String>, save: OnItemSelectedListener) {
+        val adapter = ArrayAdapter(requireContext(), R.layout.spinner, data)
+        adapter.setDropDownViewResource(R.layout.spinner_selected)
+        spinner.adapter = adapter
+        spinner.onItemSelectedListener = save
+    }*/
+
+    interface OnClickOkListener {
+        fun onClick()
     }
 }
