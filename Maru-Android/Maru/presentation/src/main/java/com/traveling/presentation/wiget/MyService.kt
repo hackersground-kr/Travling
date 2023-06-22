@@ -71,7 +71,7 @@ class MyService : Service() {
     override fun onDestroy() {
         super.onDestroy()
         // 서비스가 종료될 때 Runnable도 함께 제거합니다.
-        handler.removeCallbacks(runnable)
+//        handler.removeCallbacks(runnable)
         if (mReceiver != null) {
             unregisterReceiver(mReceiver)
         }
