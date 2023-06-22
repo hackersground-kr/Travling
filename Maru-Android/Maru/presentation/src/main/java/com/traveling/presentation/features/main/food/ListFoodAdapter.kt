@@ -24,7 +24,6 @@ class ListFoodAdapter(
     }
 
     override fun getItemCount() = foodList.size
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
     }
 }

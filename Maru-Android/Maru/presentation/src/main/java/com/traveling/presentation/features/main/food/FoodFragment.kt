@@ -18,7 +18,16 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
 
     private lateinit var adapter: ListFoodAdapter
 
-    override fun observerViewModel() {}
+    override fun observerViewModel() {
+        with(viewModel) {
+            foods.observe(this@FoodFragment) { foods ->
+                if (foods != null) {
+                    viewModel.addFoods(foods)
+                    adapter.notifyItemRangeInserted(0, foods.size)
+                }
+            }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,6 +36,7 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
     ): View? {
         val v = super.onCreateView(inflater, container, savedInstanceState)
         initRecyclerView()
+        viewModel.loadFoods(mBinding.title.text.toString())
         return v
     }
 

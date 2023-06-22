@@ -8,6 +8,6 @@ interface FoodService {
     @GET("food/{type}/{idx}")
     suspend fun getFoods(
         @Path("type") type: String,
-        @Path("idx") idx: Int
+        @Path("idx") idx: String
     ): List<Food>
 }

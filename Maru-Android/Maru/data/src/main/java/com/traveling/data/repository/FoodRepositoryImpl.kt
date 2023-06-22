@@ -8,5 +8,5 @@ import javax.inject.Inject
 class FoodRepositoryImpl @Inject constructor(
     private val foodService: FoodService
 ): FoodRepository {
-    override suspend fun getFoods(type: String, idx: Int): List<Food> = foodService.getFoods(type, idx)
+    override suspend fun getFoods(type: String, idx: String): List<Food> = foodService.getFoods(type, idx)
 }
