@@ -32,3 +32,35 @@
 ## 시작하기
 
 > **여러분의 제품/서비스를 Microsoft 애저 클라우드에 배포하기 위한 절차를 구체적으로 나열해 주세요.**
+
+
+1. 위에 과정에서 얻은 url을 가져옵니다.
+2. [링크](https://github.com/hackersground-kr/Travling/archive/refs/heads/LKH-ANDROID.zip) 를 클릭하여 해당 파일을 다운로드합니다. 그후 압축을 해제합니다.
+3. 안드로이드 스튜디오를 실행합니다.
+4. 오른쪽 상단의 Open버튼을 누릅니다.
+5. 압축을 해제한 폴더안의 경로안에서 **/Maru** 폴더를 엽니다.
+
+5.5 문제가 발생한 사람만 진행하세요! 만약 여기서 sdk 오류로인해 설치에 실패했다면, **local.properties** 파일을 수정합니다. (자신의 sdk가 설치된 곳)
+
+6. 첫 실행이라면 오른 쪽 밑에 로딩바가 없어질떄까지 기다리고 아니라면 오른쪽 위 밑의 사진처럼 생긴 gradle 설치버튼을 누릅니다.
+    
+7. 그후 아래의 사진처럼 생긴 것중 망치모양 버튼을 누릅니다.
+
+8. 모두 눌렀다면 presentation/java/com/traveling/presentation/di/NetworkModule 파일을 엽니다.
+9. 그 후 61번쨰 줄의 url을 **1번의 URL**로 변경한다.
+
+10. 그후 상단의 빌드 버튼을 누르고 Build Bundle(s) / APK(s)에 마우스를 갖다대고 Build apk(s)를 누른다.
+    
+11. 그후 조금 기다렸다가 뜨는 아래사진에서 locate버튼을 누른다. 그리고 안의 presentation-debug.apk파일의 위치를 기억한다.
+    
+12. https://appcenter.ms/ 사이트에 접속합니다.
+13. 페이지에서 보이는 Sing In 버튼을 클릭합니다.
+14. Personal, Company or School 이라 적힌 마이크로소프트 계정 로그인을 누릅니다.
+15. 마이크로소프트 계정 로그인을 마칩니다..
+16. 그후 들어온 화면에서 Add new를 클릭하고 Add new app을 선택합니다.
+17. app의 제목에는 eee로 설정하고 OS는 Android를 클릭한다음 Add new app을 누릅니다.
+18. 그 후 왼쪽 Distribute을 누른다. New releases를 누르고 11번 과정에서 얻은 파일을 업로드합니다.
+19. 잠시 기다린 후 next를 2번 연속 누릅니다.
+20. Destinations에서 자신의 이메일을 입력하고 추가한 뒤 next를 누르고  Distribute을 누릅니다.
+21. 생성된 파일을 클릭하고 오른쪽 상단의 Download를 클릭하여 다운로드합니다.
+22. 다운로드한 파일을 안드로이드 폰에서 실행하여 설치합니다.
