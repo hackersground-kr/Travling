@@ -10,6 +10,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./Maru-Android
 
     steps:
     - uses: actions/checkout@v3
@@ -20,8 +23,6 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Move the directory to Maru-Android
-      run: cd ./Maru-Android
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
