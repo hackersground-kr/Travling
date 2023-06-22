@@ -1,0 +1,40 @@
+name: Build and Deploy to App Center
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run :
+        working-directory: ./Maru-Android
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'oracle'
+        cache: gradle
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: assembleRelease with Gradle
+      run: ./gradlew assembleRelease
+        
+    - name: upload artefact to App Center
+      uses: wzieba/AppCenter-Github-Action@v1
+      with:
+        appName: Maru
+        token: ${{secrets.APP_CENTER_TOKEN}}
+        group: Traveling
+        file: /home/runner/work/Travling/Travling/Maru-Android/app/build/outputs/apk/release/app-release-unsigned.apk
+        notifyTesters: true
+        debug: true
