@@ -45,14 +45,17 @@ class OnBoardActivity : BaseActivity<ActivityOnBoardBinding, OnBoardViewModel>()
         }
         checkPermission()
         checkFirst()
-
     }
+
+    val TAG: String = "로그"
 
     private fun checkFirst() {
         if (MaruApplication.prefs.isFirst) {
-            MaruApplication.prefs.isFirst = false
+//            MaruApplication.prefs.isFirst = false
+            Log.d(TAG, "first - checkFirst() called")
         } else {
             startMainActivity()
+            Log.d(TAG, "nono - checkFirst() called")
         }
     }
 
@@ -62,24 +65,20 @@ class OnBoardActivity : BaseActivity<ActivityOnBoardBinding, OnBoardViewModel>()
         finishAffinity()
     }
     fun checkPermission() {
-
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if(!Settings.canDrawOverlays(this)) {
                 val uri = Uri.fromParts("package", packageName, null)
                 val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, uri)
                 startActivityForResult(intent, OVERLAY_PERMISSION_REQUEST_CODE)
                 Log.d("흠2", "checkPermission: ")
-
-//                checkPermission()
-
             } else {
                 val intent = Intent(applicationContext, MyService::class.java)
                 startService(intent)
                 Log.d("흠1", "checkPermission: ")
             }
         }
-
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == OVERLAY_PERMISSION_REQUEST_CODE) {

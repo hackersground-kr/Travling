@@ -16,10 +16,10 @@
     <string name="text_weight">체중</string>
     <string name="text_height">키</string>
     <string name="title_md">약 알림 정보</string>
-    <string name="text_morning">아침 약 시간(선택사항)</string>
+    <string name="text_morning">아침 약 시간</string>
     <string name="hintTime">12\n</string>
-    <string name="text_lunch">점심 약 시간(선택사항)</string>
-    <string name="text_dinner">저녁 약 시간(선택사항)</string>
+    <string name="text_lunch">점심 약 시간</string>
+    <string name="text_dinner">저녁 약 시간</string>
     <string name="title_setting">설정</string>
     <string name="text_notice">공지사항</string>
     <string name="text_private">개인정보 처리 방침</string>

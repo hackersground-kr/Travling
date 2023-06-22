@@ -38,6 +38,7 @@ class MdFragment : BaseFragment<FragmentMdBinding, MdViewModel>() {
                      }
                      alram.scheduleAlarms(ls)
                      if (activity is OnBoardActivity) {
+                         MaruApplication.prefs.isFirst = false
                          (activity as OnBoardActivity).startMainActivity()
                      } else if (activity is MainActivity) {
                          findNavController().popBackStack()
