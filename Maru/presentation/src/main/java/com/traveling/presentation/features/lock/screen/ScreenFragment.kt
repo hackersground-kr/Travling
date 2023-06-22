@@ -62,6 +62,4 @@ class ScreenFragment: BaseFragment<FragmentScreenBinding, ScreenViewModel>() {
     private fun isFragmentActive(): Boolean {
         return isAdded && !isDetached && !isRemoving
     }
-
-
 }
