@@ -9,5 +9,6 @@
     <dimen name="settingMargin">35dp</dimen>
     <dimen name="settingArrow">355dp</dimen>
     <dimen name="titleLock">50sp</dimen>
+    <dimen name="textRightMargin">20dp</dimen>
 
 </resources>
