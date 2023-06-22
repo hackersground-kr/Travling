@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@android:color/transparent" />
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/heal_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/heal_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             android:textColor="@color/settingText"
             app:layout_constraintTop_toTopOf="@+id/heal_title"
             app:layout_constraintStart_toStartOf="parent"/>
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/heal_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
             android:textColor="@color/settingText"
             app:layout_constraintTop_toTopOf="@+id/heal_name"
             app:layout_constraintStart_toStartOf="parent"/>
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/heal_call"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,12 +64,67 @@
             app:layout_constraintTop_toTopOf="@+id/heal_age"
             app:layout_constraintStart_toStartOf="parent"/>
         <ImageView
-            android:id="@+id/settingLine"
+            android:id="@+id/heal_line1"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_marginTop="70dp"
             android:src="@color/gray_soLight"
             app:layout_constraintTop_toTopOf="@+id/heal_call"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/heal_disease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textLeftMargin"
+            android:layout_marginTop="25dp"
+            android:text="@string/text_realdisease"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/settingText"
+            app:layout_constraintTop_toTopOf="@+id/heal_line1"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/heal_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textLeftMargin"
+            android:layout_marginTop="50dp"
+            android:text="@string/text_realhistory"
+            android:textSize="@dimen/text_realhistory"
+            android:textColor="@color/settingText"
+            app:layout_constraintTop_toTopOf="@+id/heal_disease"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/heal_blood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textLeftMargin"
+            android:layout_marginTop="50dp"
+            android:text="@string/text_realBlood"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/settingText"
+            app:layout_constraintTop_toTopOf="@+id/heal_history"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/heal_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textLeftMargin"
+            android:layout_marginTop="50dp"
+            android:text="@string/text_realheight"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/settingText"
+            app:layout_constraintTop_toTopOf="@+id/heal_blood"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/heal_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textLeftMargin"
+            android:layout_marginTop="50dp"
+            android:text="@string/text_realweight"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/settingText"
+            app:layout_constraintTop_toTopOf="@+id/heal_height"
+            app:layout_constraintStart_toStartOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

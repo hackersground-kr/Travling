@@ -127,6 +127,7 @@
             app:layout_constraintTop_toTopOf="@+id/lock_manbogi"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="@{() -> vm.onClickHeal()}"
             style="@style/card">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -166,6 +167,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/level1_button"
+            android:onClick="@{() -> vm.onClickExit()}"
             android:background="@color/blue">
         </androidx.appcompat.widget.AppCompatButton>
 

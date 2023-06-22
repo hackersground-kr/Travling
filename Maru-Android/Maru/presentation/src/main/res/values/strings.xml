@@ -38,5 +38,10 @@
     <string name="text_realname">이름 : 양예성</string>
     <string name="text_realage">만 16세</string>
     <string name="text_realcall">전화번호 : 010-0000-0000</string>
+    <string name="text_realdisease">의학적 질환 : 당뇨</string>
+    <string name="text_realBlood">혈액형 : O형</string>
+    <string name="text_realheight">키 : 171 cm</string>
+    <string name="text_realweight">체중 : 54 kg</string>
+    <string name="text_realhistory">의료 기록 : 맹장수술</string>
 
 </resources>
