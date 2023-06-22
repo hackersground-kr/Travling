@@ -19,11 +19,8 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
         with(viewModel) {
             foods.observe(this@FoodFragment) { foods ->
                 if (foods != null) {
-                    for (i in foods) {
-                        Log.d("로그", "$i - observerViewModel() called")
-                    }
                     viewModel.addFoods(foods)
-                    adapter.notifyItemRangeInserted(0, foods.size)
+                    adapter.notifyDataSetChanged()
                 }
             }
         }
@@ -35,30 +32,31 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
         initRecyclerView()
         with(mBinding) {
             level1.setOnClickListener {
-                reload()
-                level1.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.blue))
-                level1.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
                 viewModel.state.value = "1"
+                reload()
+                adapter.changeColor(1)
+                level1.background = resources.getDrawable(R.drawable.level11_button)
+                level1.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
             }
             level2.setOnClickListener {
-                reload()
-                level2.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.yellow))
-                level1.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
                 viewModel.state.value = "2"
-
-
+                reload()
+                adapter.changeColor(2)
+                level2.background = resources.getDrawable(R.drawable.level22_button)
+                level2.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
             }
             level3.setOnClickListener {
-                reload()
-                level3.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.red))
-                level1.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
                 viewModel.state.value = "3"
-
+                reload()
+                adapter.changeColor(3)
+                level3.background = resources.getDrawable(R.drawable.level33_button)
+                level3.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
             }
         }
     }
 
     private fun reload() {
+        viewModel.loadFoods(mBinding.title.text.toString())
         with(mBinding) {
             level1.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.gray))
             level2.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.gray))
@@ -70,7 +68,7 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
     }
 
     private fun initRecyclerView() {
-        adapter = ListFoodAdapter(viewModel.foodList)
+        adapter = ListFoodAdapter(viewModel.foodList, mBinding.title.text.toString())
         with(mBinding) {
             rv.adapter = adapter
             rv.layoutManager = GridLayoutManager(context, 2)

@@ -8,6 +8,7 @@ import com.traveling.domain.usecase.FoodUsecases
 import com.traveling.presentation.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -15,13 +16,8 @@ import javax.inject.Inject
 class FoodViewModel @Inject constructor(
     private val foodUsecase: FoodUsecases
 ): BaseViewModel() {
-    val foods = MutableLiveData<List<Food>>()
-    val state = MutableLiveData<String>()
-
-    init {
-        state.value = "1"
-        foods.value = arrayListOf()
-    }
+    val foods = MutableLiveData<List<Food>>(arrayListOf())
+    val state = MutableLiveData("1")
 
     val foodList = arrayListOf<Food>()
 
@@ -29,14 +25,10 @@ class FoodViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             val type = getType(type)
             val idx = state.value.toString()
-            Log.d("로그", "${type} :: ${idx} - loadFoods() called")
-            val a = foodUsecase.getFoods(type, idx)
-            for (i in a) {
-                Log.d("로그", "$i - loadFoods() called")
-            }
-            foods.postValue(a)
+            foods.postValue(foodUsecase.getFoods(type, idx))
         }
     }
+
 
     private fun getType(str: String): String {
         if (str == "당뇨") {
@@ -49,6 +41,7 @@ class FoodViewModel @Inject constructor(
     }
 
     fun addFoods(foods: List<Food>) {
+        foodList.clear()
         foodList.addAll(foods)
     }
 }

@@ -19,7 +19,6 @@
             android:src="@drawable/ic_rightarrow"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:onClick="@{() -> vm.onClickBack()}"
             android:background="@android:color/transparent" />
         <TextView
             android:id="@+id/heal_title"

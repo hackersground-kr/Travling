@@ -8,23 +8,13 @@ import com.traveling.presentation.databinding.DialogDiseaseBinding
 import com.traveling.presentation.features.onboard.health.HealthClickListenr
 
 
-class FoodDialog(
-    context: Context,
-    private var list: Map<String, String>,
-    private var listenr: HealthClickListenr) : Dialog(context) {
+class FoodDialog(context: Context, title: String, food: String) : Dialog(context) {
+
     private lateinit var binding: DialogDiseaseBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DialogDiseaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val s = FoodAdapter(list.keys.toList(), listenr)
-        with(binding.diseaseRv) {
-            adapter = s
-            layoutManager= LinearLayoutManager(context)
-
-        }
-
     }
-
 }

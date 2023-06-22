@@ -24,9 +24,6 @@ class DiseaseDialog(
         with(binding.diseaseRv) {
             adapter = s
             layoutManager= LinearLayoutManager(context)
-
         }
-
     }
-
 }
