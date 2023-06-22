@@ -30,5 +30,13 @@
     <string name="disease_no">취소하기</string>
     <string name="disease_yes">확인하기</string>
     <string name="text_checkBox">당뇨</string>
+    <string name="title_time">12 : 31</string>
+    <string name="text_date">6월 21일 수요일</string>
+    <string name="text_heal">의료정보 확인</string>
+    <string name="lock_pass">넘어가기</string>
+    <string name="title_heal">의료정보</string>
+    <string name="text_realname">이름 : 양예성</string>
+    <string name="text_realage">만 16세</string>
+    <string name="text_realcall">전화번호 : 010-0000-0000</string>
 
 </resources>

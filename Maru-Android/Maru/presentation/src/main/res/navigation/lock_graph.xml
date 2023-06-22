@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/lock_graph">
+    android:id="@+id/lock_graph"
+    app:startDestination="@id/screenFragment">
 
+    <fragment
+        android:id="@+id/screenFragment"
+        android:name="com.traveling.presentation.features.lock.screen.ScreenFragment"
+        android:label="ScreenFragment" >
+        <action
+            android:id="@+id/action_screenFragment_to_healFragment"
+            app:destination="@id/healFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/healFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/healFragment"
+        android:name="com.traveling.presentation.features.lock.heal.HealFragment"
+        android:label="HealFragment" />
 </navigation>
