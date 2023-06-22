@@ -1,9 +1,13 @@
 package com.traveling.presentation.features.main.home
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.traveling.presentation.base.BaseViewModel
 import com.traveling.presentation.wiget.MaruApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -21,6 +25,16 @@ class HomeViewModel @Inject constructor(
         distance.postValue(calculateDistance(time))
         calories.postValue(calculateCalories(time))
     }
+
+    fun startWalk() {
+        viewModelScope.launch(Dispatchers.IO) {
+            while (true) {
+                work.postValue(MaruApplication.prefs.walkCount)
+                delay(2000)
+            }
+        }
+    }
+
     fun calculateDistance(steps: Int): String {
         // 걸음 수에 따른 이동 거리 계산 (1만걸음 = 5킬로미터)
         val distance = steps.toDouble() / 10000 * 5
