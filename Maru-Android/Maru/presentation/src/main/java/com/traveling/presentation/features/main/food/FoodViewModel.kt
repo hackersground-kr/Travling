@@ -18,6 +18,7 @@ class FoodViewModel @Inject constructor(
 ): BaseViewModel() {
     val foods = MutableLiveData<List<Food>>(arrayListOf())
     val state = MutableLiveData("1")
+    val mode =  MutableLiveData(1)
 
     val foodList = arrayListOf<Food>()
 

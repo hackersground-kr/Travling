@@ -1,17 +1,20 @@
 package com.traveling.presentation.features.main.food
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.traveling.domain.model.Food
+import com.traveling.presentation.R
 import com.traveling.presentation.databinding.ListFoodBinding
 
 class ListFoodAdapter(
+    private val context: Context,
     private val foodList: List<Food>,
     private val mb: String,
+    private val viewModel: FoodViewModel
 ): RecyclerView.Adapter<ListFoodAdapter.ViewHolder>() {
-    var foodBackground: ConstraintLayout? = null
     inner class ViewHolder(private val binding: ListFoodBinding): RecyclerView.ViewHolder(binding.root) {
         val title = binding.title
         val detail = binding.detail
@@ -31,14 +34,12 @@ class ListFoodAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.title.text = foodList[position].foodname
         holder.detail.text = foodList[position].foodtype
-        foodBackground = holder.food
-    }
+        val foodBackground = holder.food
 
-    fun changeColor(position: Int) {
-        when (position) {
-            1 -> foodBackground?.setBackgroundResource(com.traveling.presentation.R.drawable.level1_button)
-            2 -> foodBackground?.setBackgroundResource(com.traveling.presentation.R.drawable.level2_button)
-            3 -> foodBackground?.setBackgroundResource(com.traveling.presentation.R.drawable.level3_button)
+        when (viewModel.mode.value) {
+            1 -> foodBackground.setBackgroundColor(R.drawable.level1_button)
+            2 -> foodBackground.background = context.resources.getDrawable(R.drawable.level2_button)
+            3 -> foodBackground.background = context.resources.getDrawable(R.drawable.level3_button)
         }
     }
 }

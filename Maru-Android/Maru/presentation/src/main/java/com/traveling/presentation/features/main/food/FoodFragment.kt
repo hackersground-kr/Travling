@@ -1,6 +1,5 @@
 package com.traveling.presentation.features.main.food
 
-import android.util.Log
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
@@ -33,22 +32,22 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
         with(mBinding) {
             level1.setOnClickListener {
                 viewModel.state.value = "1"
+                viewModel.mode.value = 1
                 reload()
-                adapter.changeColor(1)
                 level1.background = resources.getDrawable(R.drawable.level11_button)
                 level1.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
             }
             level2.setOnClickListener {
+                viewModel.mode.value = 2
                 viewModel.state.value = "2"
                 reload()
-                adapter.changeColor(2)
                 level2.background = resources.getDrawable(R.drawable.level22_button)
                 level2.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
             }
             level3.setOnClickListener {
+                viewModel.mode.value = 3
                 viewModel.state.value = "3"
                 reload()
-                adapter.changeColor(3)
                 level3.background = resources.getDrawable(R.drawable.level33_button)
                 level3.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
             }
@@ -68,7 +67,7 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
     }
 
     private fun initRecyclerView() {
-        adapter = ListFoodAdapter(viewModel.foodList, mBinding.title.text.toString())
+        adapter = ListFoodAdapter(requireContext(), viewModel.foodList, mBinding.title.text.toString(), viewModel)
         with(mBinding) {
             rv.adapter = adapter
             rv.layoutManager = GridLayoutManager(context, 2)
