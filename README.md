@@ -184,20 +184,29 @@
     > 
     - Step by Step
         1. [여기를 클릭](https://github.com/hackersground-kr/Travling/releases/download/1.0.1/Maru-Backend.zip)하여 백엔드 소스코드를 다운받아요
-        2. .env 파일의 빈 변수들에
+        2. 파일 압축을 해제하여 주세요.
+        3. VS Code 앱을 실행해요
+        4. 압축을 해제한 폴드를 vscode에서 실행시킵니다.
+        5. .env 파일의 빈 변수들에
             1. MYSQL_HOST에 (DB 서버 이름).mysql.database.azure.com
             2. MYSQL_USER에 DB 유저 네임을
             3. MYSQL_PASS에 DB 비밀번호를 입력해요
-        3. VS Code 앱을 실행해요
-        4. 확장(Extension) 에서 Azure Tools를 검색 후 설치해요
-        5. Azure Tools에서 웹 앱, DB 서버가 있는 계정으로 로그인을 해요
-        6. VS Code의 작업 표시줄에서 Azure 탭을 클릭해요
-        7. 구독 폴더를 열어 App Services 폴더 또한 연 후,
+        6. 확장(Extension) 에서 Azure Tools를 검색 후 설치해요
+        7. Azure Tools에서 웹 앱, DB 서버가 있는 계정으로 로그인을 해요
+        8. VS Code의 작업 표시줄에서 Azure 탭을 클릭해요
+           -> 왼쪽 탭 하단에 설정부터 위로 3칸 가시면 있습니다. (설정 포함 3칸)
+        9. 황금 열쇠 옆에 있는 화살표를 클릭하고 App Service의 화살표를 다시 클릭합니다
             
-            생성한 웹 앱을 오른쪽 마우스를 클릭 해 Deploy to Web App을 클릭해요
+            이전에 웹 앱을 만들때 설정한 이름과 같은걸 오른쪽 마우스를 클릭 해 Deploy to Web App을 클릭해요
+     
+            누른뒤 나타난 Maru-Backend 를 누르세요
+   
+            이후 표시되는 팝업창에 YES를 클릭후 Deploy를 클릭해주세요.
             
-            이후 표시되는 팝업창은 모두 Yes로 표시해주어요
-            
+         10. 이러면 서버 설정이 완료 되었습니다.
+             -> 배포기 완료되었다는 소리겠죠?
+
+
 
 1. 위에 과정에서 얻은 url을 가져온다.
 2. [링크](https://github.com/hackersground-kr/Travling/archive/refs/heads/LKH-ANDROID.zip) 를 클릭하여 해당 파일을 다운한다. 그후 압축을 해제한다.
