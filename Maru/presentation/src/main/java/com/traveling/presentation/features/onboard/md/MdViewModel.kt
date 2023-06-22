@@ -3,8 +3,11 @@ package com.traveling.presentation.features.onboard.md
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.traveling.presentation.base.BaseViewModel
+import com.traveling.presentation.wiget.AlarmScheduler
 import com.traveling.presentation.wiget.MaruApplication
+import com.traveling.presentation.wiget.MaruApplication.Companion.prefs
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -38,6 +41,7 @@ class MdViewModel @Inject constructor(
             prefs.day31 = day31.value!!
             prefs.day32 = day32.value!!
         }
+
         viewEvent(ON_CLICK_COMPLETE)
     }
 

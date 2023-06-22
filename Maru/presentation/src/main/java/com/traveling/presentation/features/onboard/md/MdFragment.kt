@@ -11,6 +11,7 @@ import com.traveling.presentation.features.main.MainActivity
 import com.traveling.presentation.features.onboard.OnBoardActivity
 import com.traveling.presentation.features.onboard.md.MdViewModel.Companion.ON_CLICK_COMPLETE
 import com.traveling.presentation.features.onboard.md.MdViewModel.Companion.RETRY
+import com.traveling.presentation.wiget.AlarmScheduler
 import com.traveling.presentation.wiget.MaruApplication
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,6 +22,21 @@ class MdFragment : BaseFragment<FragmentMdBinding, MdViewModel>() {
         bindingViewEvent { event ->
              when (event) {
                  ON_CLICK_COMPLETE -> {
+                     val alram = AlarmScheduler(requireContext())
+                     alram.cancelAlarms()
+                     var ls = mutableListOf<String>()
+                     with(viewModel) {
+                         if (day11 != null && day12 != null) {
+                             ls.add("${day11.value}:${day12.value}")
+                         }
+                         if (day21 != null && day22 != null) {
+                             ls.add("${day21.value}:${day22.value}")
+                         }
+                         if (day31 != null && day32 != null) {
+                             ls.add("${day31.value}:${day32.value}")
+                         }
+                     }
+                     alram.scheduleAlarms(ls)
                      if (activity is OnBoardActivity) {
                          (activity as OnBoardActivity).startMainActivity()
                      } else if (activity is MainActivity) {
@@ -48,5 +64,6 @@ class MdFragment : BaseFragment<FragmentMdBinding, MdViewModel>() {
             viewModel.day32.value = prefs.day32
 
         }
+
     }
 }
