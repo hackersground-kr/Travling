@@ -10,7 +10,8 @@ import com.traveling.presentation.features.main.food.FoodViewModel
 
 class MdAdapter(
     private var mdList: List<String>,
-    private val viewModel: FoodViewModel
+    private val viewModel: FoodViewModel,
+    private val callback: () -> Unit
 ): RecyclerView.Adapter<MdAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -27,6 +28,7 @@ class MdAdapter(
         holder.mdBtn.text = mdList[position]
         holder.mdBtn.setOnClickListener {
             viewModel.md.value = holder.mdBtn.text.toString()
+            callback()
         }
     }
 

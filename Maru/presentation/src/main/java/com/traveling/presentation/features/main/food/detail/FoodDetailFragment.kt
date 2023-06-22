@@ -25,9 +25,9 @@ class FoodDetailFragment : BaseFragment<FragmentFoodDetailBinding, FoodDetailVie
                 findNavController().popBackStack()
             }
             when (viewModel.idx.value) {
-                1 -> mBinding.main.background = resources.getDrawable(R.color.blue)
-                2 -> mBinding.main.background = resources.getDrawable(R.color.yellow)
-                3 -> mBinding.main.background = resources.getDrawable(R.color.red)
+                "1" -> mBinding.main.background = resources.getDrawable(R.color.blue)
+                "2" -> mBinding.main.background = resources.getDrawable(R.color.yellow)
+                "3" -> mBinding.main.background = resources.getDrawable(R.color.red)
             }
         }
     }

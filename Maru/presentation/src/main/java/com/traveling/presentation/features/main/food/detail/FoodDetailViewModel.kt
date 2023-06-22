@@ -10,5 +10,5 @@ class FoodDetailViewModel @Inject constructor(): BaseViewModel() {
     val title = MutableLiveData<String>()
     val detail = MutableLiveData<String>()
     val md = MutableLiveData<String>()
-    val idx = MutableLiveData<Int>()
+    val idx = MutableLiveData<String>()
 }

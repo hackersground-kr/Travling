@@ -1,6 +1,5 @@
 package com.traveling.presentation.features.main.food
 
-import android.annotation.SuppressLint
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.traveling.domain.model.Food
@@ -17,11 +16,10 @@ class FoodViewModel @Inject constructor(
 ): BaseViewModel() {
     val foods = MutableLiveData<List<Food>>(arrayListOf())
     val state = MutableLiveData("1")
-    val mode =  MutableLiveData(1)
     val md = MutableLiveData("당뇨")
 
     val foodList = arrayListOf<Food>()
-    @SuppressLint("NullSafeMutableLiveData")
+
     fun loadFoods(type: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val type = getType(type)
@@ -46,8 +44,11 @@ class FoodViewModel @Inject constructor(
     }
 
     fun addFoods(foods: List<Food>) {
-        foodList.clear()
         foodList.addAll(foods)
+    }
+
+    fun removeFoods() {
+        foodList.clear()
     }
 
     companion object {

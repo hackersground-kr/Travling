@@ -37,10 +37,10 @@ class ListFoodAdapter(
         holder.detail.text = foodList[position].foodtype
         val foodBackground = holder.food
 
-        when (viewModel.mode.value) {
-            1 -> foodBackground.background = context.resources.getDrawable(R.drawable.level1_button)
-            2 -> foodBackground.background = context.resources.getDrawable(R.drawable.level2_button)
-            3 -> foodBackground.background = context.resources.getDrawable(R.drawable.level3_button)
+        when (viewModel.state.value) {
+            "1" -> foodBackground.background = context.resources.getDrawable(R.drawable.level1_button)
+            "2" -> foodBackground.background = context.resources.getDrawable(R.drawable.level2_button)
+            "3" -> foodBackground.background = context.resources.getDrawable(R.drawable.level3_button)
         }
     }
 }

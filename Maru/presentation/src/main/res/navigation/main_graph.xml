@@ -78,8 +78,8 @@
             />
         <argument
             android:name="idx"
-            app:argType="integer"
-            android:defaultValue="1"/>
+            app:argType="string"
+            android:defaultValue=""/>
     </fragment>
     <fragment
         android:id="@+id/healthFragment"

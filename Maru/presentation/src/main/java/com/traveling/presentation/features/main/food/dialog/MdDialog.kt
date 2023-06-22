@@ -11,7 +11,8 @@ import com.traveling.presentation.wiget.MaruApplication
 
 class MdDialog(
     context: Context,
-    private val viewModel: FoodViewModel
+    private val viewModel: FoodViewModel,
+    private val callback: () -> Unit
     ) : Dialog(context) {
 
     private val binding: DialogFoodBinding by lazy { DialogFoodBinding.inflate(layoutInflater) }
@@ -24,7 +25,10 @@ class MdDialog(
     }
 
     private fun initRecyclerView() {
-        adapter = MdAdapter(MaruApplication.prefs.md1.replace(" ", "").split(","), viewModel)
+        adapter = MdAdapter(MaruApplication.prefs.md1.replace(" ", "").split(","), viewModel) {
+            callback()
+            dismiss()
+        }
         with(binding) {
             rv.adapter = adapter
             rv.layoutManager = LinearLayoutManager(context)
