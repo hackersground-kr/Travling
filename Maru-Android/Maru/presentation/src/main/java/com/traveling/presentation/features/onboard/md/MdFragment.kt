@@ -1,5 +1,6 @@
 package com.traveling.presentation.features.onboard.md
 
+import android.util.Log
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -17,7 +18,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class MdFragment : BaseFragment<FragmentMdBinding, MdViewModel>() {
     override val viewModel: MdViewModel by viewModels()
     override fun observerViewModel() {
-        initAlarm()
         bindingViewEvent { event ->
              when (event) {
                  ON_CLICK_COMPLETE -> {
@@ -32,14 +32,21 @@ class MdFragment : BaseFragment<FragmentMdBinding, MdViewModel>() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        initAlarm()
+    }
+
     private fun initAlarm() {
+        Log.d("로그", "${MaruApplication.prefs.day11} - initAlarm() called")
         with(MaruApplication) {
-            mBinding.mdMorningHour.setText(prefs.day11)
-            mBinding.mdMorningMin.setText(prefs.day12)
-            mBinding.mdLunchHour.setText(prefs.day21)
-            mBinding.mdLunchMin.setText(prefs.day22)
-            mBinding.mdDinnerHour.setText(prefs.day31)
-            mBinding.mdDinnerMin.setText(prefs.day32)
+            viewModel.day11.value = prefs.day11
+            viewModel.day12.value = prefs.day12
+            viewModel.day21.value = prefs.day21
+            viewModel.day22.value = prefs.day22
+            viewModel.day31.value = prefs.day31
+            viewModel.day32.value = prefs.day32
+
         }
     }
 }

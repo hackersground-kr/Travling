@@ -74,7 +74,7 @@ class PreferenceManager(context: Context) {
         const val WEIGHT = "WEIGHT"
         const val HEIGHT = "HEIGHT"
 
-        const val IS_FIRST = "ISFIRST"
+        const val IS_FIRST = "IS_FIRST"
 
         const val DAY11 = "DAY11"
         const val DAY12 = "DAY12"

@@ -11,7 +11,6 @@ import javax.inject.Inject
 class MdViewModel @Inject constructor(
 
 ): BaseViewModel() {
-
     var day11 = MutableLiveData<String>()
     var day12 = MutableLiveData<String>()
     var day21 = MutableLiveData<String>()
@@ -42,8 +41,8 @@ class MdViewModel @Inject constructor(
         viewEvent(ON_CLICK_COMPLETE)
     }
 
-    private fun isHour(str: String) = str.toInt() in 0..23
-    private fun isMinute(str: String) = str.toInt() in 0..59
+    private fun isHour(str: String) = str.toInt() in 0..23 || str == ""
+    private fun isMinute(str: String) = str.toInt() in 0..59 || str == ""
 
     companion object {
         const val ON_CLICK_COMPLETE = 0

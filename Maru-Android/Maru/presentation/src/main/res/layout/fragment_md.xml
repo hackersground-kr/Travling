@@ -40,7 +40,7 @@
                     android:layout_width="310dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="10dp">
-                    <androidx.appcompat.widget.AppCompatEditText
+                    <EditText
                         android:id="@+id/mdMorningHour"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
@@ -58,7 +58,7 @@
                         android:layout_marginBottom="3dp"
                         android:text=":"
                         android:textSize="@dimen/text_time"/>
-                    <androidx.appcompat.widget.AppCompatEditText
+                    <EditText
                         android:id="@+id/mdMorningMin"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
@@ -83,7 +83,7 @@
                     android:layout_width="310dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="10dp">
-                    <androidx.appcompat.widget.AppCompatEditText
+                    <EditText
                         android:id="@+id/mdLunchHour"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
@@ -102,7 +102,7 @@
                         android:layout_marginBottom="3dp"
                         android:text=":"
                         android:textSize="@dimen/text_time"/>
-                    <androidx.appcompat.widget.AppCompatEditText
+                    <EditText
                         android:id="@+id/mdLunchMin"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
@@ -127,7 +127,7 @@
                     android:layout_width="310dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="10dp">
-                    <androidx.appcompat.widget.AppCompatEditText
+                    <EditText
                         android:id="@+id/mdDinnerHour"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
@@ -146,7 +146,7 @@
                         android:layout_marginBottom="3dp"
                         android:text=":"
                         android:textSize="@dimen/text_time"/>
-                    <androidx.appcompat.widget.AppCompatEditText
+                    <EditText
                         android:id="@+id/mdDinnerMin"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
