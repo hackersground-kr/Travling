@@ -29,11 +29,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
       
-    - name: Test
-      run: pwd && ls -a && tree
-      
     - name: Upload apk
       uses: actions/upload-artifact@v3
       with:
         name: android-apk
-        path: /home/runner/work/Travling/Travling/Maru-Android/Maru/app/build/outputs/apk/release/app-release-unsinged.apk
+        path: /home/runner/work/Travling/Travling/Maru-Android/Maru/presentation/build/outputs/apk/presentation-release-unsigned.apk
