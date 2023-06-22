@@ -34,12 +34,14 @@
                 app:navGraph="@navigation/main_graph" />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <com.google.android.material.navigation.NavigationView
-            android:paddingTop="75dp"
+            android:paddingStart="30dp"
+            android:paddingTop="190dp"
             android:id="@+id/nav_view"
             android:layout_gravity="start"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
+            app:itemTextColor="@color/gray"
             app:menu="@menu/drawer_menu" />
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

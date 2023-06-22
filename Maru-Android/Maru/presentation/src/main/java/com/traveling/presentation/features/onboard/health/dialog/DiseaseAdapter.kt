@@ -6,16 +6,16 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
 import com.traveling.presentation.R
-import com.traveling.presentation.features.onboard.health.HealthClickListenr
+import com.traveling.presentation.features.onboard.health.HealthClickListener
 
 
 class DiseaseAdapter(
     private var list: List<String>,
-    private var clickListenr: HealthClickListenr
+    private var clickListenr: HealthClickListener
 ): RecyclerView.Adapter<DiseaseAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var checkBox: CheckBox
-        init { checkBox = view.findViewById(R.id.disease_checkBox) }
+        init { checkBox = view.findViewById(R.id.md_btn) }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

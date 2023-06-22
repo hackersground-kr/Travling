@@ -1,6 +1,5 @@
 package com.traveling.presentation.features.main.food
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.traveling.domain.model.Food
@@ -8,7 +7,6 @@ import com.traveling.domain.usecase.FoodUsecases
 import com.traveling.presentation.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -19,6 +17,7 @@ class FoodViewModel @Inject constructor(
     val foods = MutableLiveData<List<Food>>(arrayListOf())
     val state = MutableLiveData("1")
     val mode =  MutableLiveData(1)
+    val md = MutableLiveData("당뇨")
 
     val foodList = arrayListOf<Food>()
 
@@ -28,6 +27,10 @@ class FoodViewModel @Inject constructor(
             val idx = state.value.toString()
             foods.postValue(foodUsecase.getFoods(type, idx))
         }
+    }
+
+    fun onClickMd() {
+        viewEvent(ON_CLICK_MD)
     }
 
 
@@ -44,5 +47,9 @@ class FoodViewModel @Inject constructor(
     fun addFoods(foods: List<Food>) {
         foodList.clear()
         foodList.addAll(foods)
+    }
+
+    companion object {
+        const val ON_CLICK_MD = 0
     }
 }

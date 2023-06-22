@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.traveling.presentation.R
 import com.traveling.presentation.base.BaseFragment
 import com.traveling.presentation.databinding.FragmentFoodBinding
+import com.traveling.presentation.features.main.food.FoodViewModel.Companion.ON_CLICK_MD
+import com.traveling.presentation.features.main.food.dialog.MdDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -16,6 +18,11 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
     private lateinit var adapter: ListFoodAdapter
 
     override fun observerViewModel() {
+        bindingViewEvent { event ->
+            when (event) {
+                ON_CLICK_MD -> MdDialog(requireContext(), viewModel).show()
+            }
+        }
         with(viewModel) {
             foods.observe(this@FoodFragment) { foods ->
                 if (foods != null) {

@@ -3,17 +3,15 @@ package com.traveling.presentation.features.onboard.health.dialog
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import androidx.databinding.adapters.LinearLayoutBindingAdapter
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.traveling.presentation.databinding.DialogDiseaseBinding
-import com.traveling.presentation.features.onboard.health.HealthClickListenr
+import com.traveling.presentation.features.onboard.health.HealthClickListener
 
 
 class DiseaseDialog(
     context: Context,
     private var list: Map<String, String>,
-    private var listenr: HealthClickListenr) : Dialog(context) {
+    private var listenr: HealthClickListener) : Dialog(context) {
     private lateinit var binding: DialogDiseaseBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -20,7 +20,7 @@ import com.traveling.presentation.features.onboard.health.dialog.DiseaseDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HealthFragment : BaseFragment<FragmentHealthBinding, HealthViewModel>(), HealthClickListenr {
+class HealthFragment : BaseFragment<FragmentHealthBinding, HealthViewModel>(), HealthClickListener {
     override val viewModel: HealthViewModel by viewModels()
     private lateinit var checkList :MutableList<String>
     private val test = mapOf("당뇨" to "dm", "고혈압" to "hbp", "심근경색" to "mi")
