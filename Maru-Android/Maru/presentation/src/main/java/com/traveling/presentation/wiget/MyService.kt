@@ -1,11 +1,9 @@
-package com.example.templete.presentation.feature.main
+package com.traveling.presentation.wiget
 
 import android.Manifest
-import android.app.KeyguardManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.Service
-import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
@@ -13,16 +11,14 @@ import android.os.Build
 import android.os.Handler
 import android.os.IBinder
 import android.util.Log
-import android.view.WindowManager
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.example.templete.R
-import com.example.templete.presentation.feature.back.OnAlarmActivity
+import com.traveling.presentation.R
 
 class MyService : Service() {
 
-    private val CHANNEL_ID = "my_channel"
+    private val CHANNEL_ID = "MARU_SERVICE"
     private val NOTIFICATION_ID = 123
     private var mReceiver: ScreenReceiver? = null
     private lateinit var handler: Handler
@@ -57,30 +53,6 @@ class MyService : Service() {
                         }
                     }
                 }
-//                Log.d("LOG", "run: 임")
-//                val keyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
-//                if (keyguardManager.isKeyguardLocked) {
-//                    Log.d("LOG", "run: 임2")
-//                    val intent = Intent(this@MyService, OnAlarmActivity::class.java)
-//                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//
-//                    startActivity(intent)
-//                }
-//                val s = OnAlarmActivity()
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
-//
-//                    s.setShowWhenLocked(true)
-//                    s.setTurnScreenOn(true)
-//                    (getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager).apply {
-//                        requestDismissKeyguard(OnAlarmActivity(), null)
-//                    }
-//                } else {
-//                    s.window.addFlags(
-//                        WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD or
-//                                WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED or
-//                                WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
-//                    )
-//                }
                 handler.postDelayed(this, 2000)
             }
         }
@@ -109,7 +81,7 @@ class MyService : Service() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 CHANNEL_ID,
-                "My Channel",
+                "Maru Channel",
                 NotificationManager.IMPORTANCE_DEFAULT
             )
             val notificationManager = getSystemService(NotificationManager::class.java)
@@ -119,9 +91,9 @@ class MyService : Service() {
 
     private fun showNotification() {
         val notificationBuilder = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setContentTitle("알림")
-            .setContentText("앱이 실행 중입니다.")
+            .setSmallIcon(R.drawable.ic_app)
+            .setContentTitle("마루앱")
+            .setContentText("앱이 정보를 표기하고 있습니다.")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setAutoCancel(false)
             .setOngoing(true)
@@ -132,13 +104,6 @@ class MyService : Service() {
                     Manifest.permission.POST_NOTIFICATIONS
                 ) != PackageManager.PERMISSION_GRANTED
             ) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
                 return
             }
             notify(NOTIFICATION_ID, notificationBuilder.build())

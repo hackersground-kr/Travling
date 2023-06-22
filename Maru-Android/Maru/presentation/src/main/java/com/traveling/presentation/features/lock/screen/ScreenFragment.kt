@@ -32,6 +32,17 @@ class ScreenFragment: BaseFragment<FragmentScreenBinding, ScreenViewModel>() {
                 ON_CLICK_EXIT -> activity?.finish()
             }
         }
+        job = viewModel.viewModelScope.launch(Dispatchers.IO) {
+            while (isFragmentActive()) {
+
+                viewModel.time.postValue(viewModel.getCurrentTime())
+                viewModel.date.postValue(viewModel.getCurrentDate())
+//                mBinding.lockTime.text = viewModel.getCurrentTime()
+//                mBinding.lockDate.text = viewModel.getCurrentDate()
+//                mBinding.lockDate.text = viewModel.getCurrentDate()
+                delay(1000)
+            }
+        }
     }
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,14 +50,7 @@ class ScreenFragment: BaseFragment<FragmentScreenBinding, ScreenViewModel>() {
         savedInstanceState: Bundle?
     ): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
-        var job = viewModel.viewModelScope.launch(Dispatchers.IO) {
-            while (isFragmentActive()) {
 
-                mBinding.lockTime.text = viewModel.getCurrentTime()
-                mBinding.lockDate.text = viewModel.getCurrentDate()
-                delay(1000)
-            }
-        }
         return view
     }
 

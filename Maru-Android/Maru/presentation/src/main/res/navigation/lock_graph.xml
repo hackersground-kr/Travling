@@ -15,10 +15,18 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
-            app:popUpTo="@id/healFragment" />
+            app:popUpTo="@id/screenFragment" />
     </fragment>
     <fragment
         android:id="@+id/healFragment"
         android:name="com.traveling.presentation.features.lock.heal.HealFragment"
-        android:label="HealFragment" />
+        android:label="HealFragment" >
+        <action
+            android:id="@+id/action_healFragment_to_screenFragment2"
+            app:destination="@id/screenFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
 </navigation>

@@ -17,10 +17,17 @@ class HealFragment: BaseFragment<FragmentHealBinding, HealViewModel>() {
     override val viewModel: HealViewModel by viewModels()
 
     override fun observerViewModel() {
+        viewModel.loadHeal()
         bindingViewEvent { event ->
             when (event) {
-                ON_CLICK_BACK -> findNavController().popBackStack()
+//                ON_CLICK_BACK -> findNavController().popBackStack()
+                ON_CLICK_BACK -> findNavController().navigate(R.id.action_healFragment_to_screenFragment2)
             }
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        activity?.finish()
     }
 }
