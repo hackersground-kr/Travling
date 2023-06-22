@@ -29,6 +29,9 @@ jobs:
     - name: assembleRelease with Gradle
       run: ./gradlew assembleRelease
       
+    - name: Test
+      run: pwd && ls -a && tree
+      
     - name: Upload apk
       uses: actions/upload-artifact@v3
       with:
