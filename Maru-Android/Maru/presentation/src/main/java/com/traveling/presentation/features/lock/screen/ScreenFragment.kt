@@ -37,6 +37,7 @@ class ScreenFragment: BaseFragment<FragmentScreenBinding, ScreenViewModel>() {
 
                 viewModel.time.postValue(viewModel.getCurrentTime())
                 viewModel.date.postValue(viewModel.getCurrentDate())
+                viewModel.loadData()
 //                mBinding.lockTime.text = viewModel.getCurrentTime()
 //                mBinding.lockDate.text = viewModel.getCurrentDate()
 //                mBinding.lockDate.text = viewModel.getCurrentDate()

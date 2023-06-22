@@ -2,6 +2,7 @@ package com.traveling.presentation.features.main.home
 
 import androidx.lifecycle.MutableLiveData
 import com.traveling.presentation.base.BaseViewModel
+import com.traveling.presentation.wiget.MaruApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -10,7 +11,27 @@ class HomeViewModel @Inject constructor(
 
 ): BaseViewModel() {
     val setting = MutableLiveData<Boolean>()
+    var work = MutableLiveData<String>()
+    var distance = MutableLiveData<String>()
+    var calories = MutableLiveData<String>()
 
+    fun loadData() {
+        var wos: Int = if (MaruApplication.prefs.walkCount == "") { 0 } else {  MaruApplication.prefs.walkCount.toInt()}
+        work.postValue(wos.toString())
+        distance.postValue(calculateDistance(wos))
+        calories.postValue(calculateCalories(wos))
+    }
+    fun calculateDistance(steps: Int): String {
+        // 걸음 수에 따른 이동 거리 계산 (1만걸음 = 5킬로미터)
+        val distance = steps.toDouble() / 10000 * 5
+        return "${"%.2f".format(distance)}km"
+    }
+
+    fun calculateCalories(steps: Int): String {
+        // 걸음 수에 따른 소모 칼로리 계산 (1만걸음당 300칼로리)
+        val calories = (steps.toDouble() / 10000 * 300).toInt()
+        return "${calories}kcal"
+    }
     fun onClickFood() {
         viewEvent(ON_CLICK_FOOD)
     }

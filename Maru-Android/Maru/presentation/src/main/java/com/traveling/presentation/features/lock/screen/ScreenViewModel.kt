@@ -6,6 +6,8 @@ import androidx.lifecycle.LifecycleCoroutineScope
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.traveling.presentation.base.BaseViewModel
+import com.traveling.presentation.wiget.MaruApplication
+import com.traveling.presentation.wiget.MaruApplication.Companion.prefs
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,6 +19,12 @@ class ScreenViewModel @Inject constructor()
     : BaseViewModel() {
     var time = MutableLiveData<String>()
     var date = MutableLiveData<String>()
+    var work = MutableLiveData<String>()
+
+
+    fun loadData() {
+        work.postValue(MaruApplication.prefs.walkCount)
+    }
 
     fun getCurrentTime(): String {
         val calendar = Calendar.getInstance()

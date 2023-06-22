@@ -15,6 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
     override val viewModel: HomeViewModel by viewModels()
     override fun observerViewModel() {
+        viewModel.loadData()
         bindingViewEvent { event ->
             when (event) {
                 ON_CLICK_FOOD -> findNavController().navigate(R.id.action_homeFragment_to_foodFragment)

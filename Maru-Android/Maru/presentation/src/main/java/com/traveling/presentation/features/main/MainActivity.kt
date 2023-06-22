@@ -1,6 +1,8 @@
 package com.traveling.presentation.features.main
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
@@ -8,6 +10,7 @@ import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.navigation.findNavController
 import com.traveling.presentation.R
@@ -21,11 +24,18 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     override val viewModel: MainViewModel by viewModels()
     private var OVERLAY_PERMISSION_REQUEST_CODE = 100
-    override fun observerViewModel() {}
+    override fun observerViewModel() {
+
+    }
 
     override fun onStart() {
         super.onStart()
         initToolBar()
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED) {
+            requestPermissions(arrayOf(Manifest.permission.ACTIVITY_RECOGNITION), 0)
+        }
         checkPermission()
     }
 
@@ -81,6 +91,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
                 Log.d("흠1", "checkPermission: ")
             }
         }
+
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
