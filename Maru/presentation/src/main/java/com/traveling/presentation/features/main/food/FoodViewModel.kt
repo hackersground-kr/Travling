@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.traveling.domain.model.Food
 import com.traveling.domain.usecase.FoodUsecases
 import com.traveling.presentation.base.BaseViewModel
+import com.traveling.presentation.wiget.MaruApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,7 +17,14 @@ class FoodViewModel @Inject constructor(
 ): BaseViewModel() {
     val foods = MutableLiveData<List<Food>>(arrayListOf())
     val state = MutableLiveData("1")
-    val md = MutableLiveData("당뇨")
+    val md = MutableLiveData<String>("당뇨")
+
+    fun init() {
+        val result = MaruApplication.prefs.md1
+        if (!(result.isNotBlank() || result.isNotEmpty())) {
+            md.value = result.split(",")[0]
+        }
+    }
 
     val foodList = arrayListOf<Food>()
 

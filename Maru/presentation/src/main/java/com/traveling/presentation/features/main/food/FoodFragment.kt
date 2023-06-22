@@ -5,6 +5,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.github.mikephil.charting.utils.Utils.init
 import com.traveling.domain.model.Food
 import com.traveling.presentation.R
 import com.traveling.presentation.base.BaseFragment
@@ -108,15 +109,8 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
 
     override fun onStart() {
         super.onStart()
-        val dr = MaruApplication.prefs.md1
-        val first= dr.split(",")[0]
-        if (dr != "") {
-            viewModel.md.value = first
-            reload()
-        } else {
-            viewModel.md.value = "당뇨"
-            reload()
-        }
+        viewModel.init()
+        reload()
         initRecyclerView()
         initOnClickListener()
         initOnClickMode()
