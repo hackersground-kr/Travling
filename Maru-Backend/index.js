@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+const request = require('request');
 const fs = require('fs');
 
 require('dotenv').config();
@@ -26,6 +27,23 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/news', (req, res) => {
+  let options = {
+    url: 'https://newsapi.org/v2/top-headlines?country=kr&apiKey=789491bf45a2434aa303cf77186a6ae2',
+    headers: {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 7_1_4; en-US) Gecko/20130401 Firefox/74.0'
+    }
+  }
+
+  request.get(options, (error, response, body) => {
+    if (error) {
+      console.error(error);
+    } else {
+      res.send(response.body)
+    }
+  });
+})
 
 app.get('/food/:disease/:danger', (req, res) => {
   const disease = req.params.disease;
