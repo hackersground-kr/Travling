@@ -1,6 +1,7 @@
 package com.traveling.presentation.features.main.food
 
 import android.util.Log
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -111,7 +112,13 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
         initRecyclerView()
         initOnClickListener()
         initOnClickMode()
-        viewModel.md.value = MaruApplication.prefs.md1.replace(" ", "").split(",")[0]
+        val result = MaruApplication.prefs.md1.replace(" ", "").split(",")[0]
+        Log.d(TAG, ",${result}, - onStart() called")
+        if (result == "" || result.isEmpty() || result.isBlank()) {
+            viewModel.md.value = "당뇨"
+        } else {
+            viewModel.md.value = result
+        }
         mBinding.title.text = viewModel.md.value
         reload()
         mBinding.level1.performClick()
