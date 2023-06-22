@@ -1,0 +1,31 @@
+name: Build and Upload APK
+
+on:
+  push:
+    branches:
+      - Android
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: 17
+
+      - name: Build with Gradle
+        run: ./gradlew assembleDebug
+
+      - name: Upload APK to App Center
+        uses: microsoft/appcenter-action@v2
+        with:
+          app_name: Marubestswlk0310
+          app_secret: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_418ABB879F354E9D8DEF719559CCF082 }}
+          file: Maru/presentation/release/presentation-release.apk
+          group: Collaborators
+          packed: 'app-appCenter-debug.apk'
