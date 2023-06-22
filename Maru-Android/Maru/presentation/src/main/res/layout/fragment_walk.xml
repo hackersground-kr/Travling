@@ -45,7 +45,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:gravity="center"
-                    android:text="@{vm}걸음"
+                    android:text="@={vm.walkCount} 걸음"
                     android:textColor="@color/gray"
                     android:textSize="16sp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
