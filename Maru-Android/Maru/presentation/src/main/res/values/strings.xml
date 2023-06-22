@@ -26,5 +26,9 @@
     <string name="text_terms">이용약관</string>
     <string name="text_version">버전 : 1.0.0</string>
     <string name="title_news">오늘의 뉴스</string>
+    <string name="title_desease">의학적 질환</string>
+    <string name="disease_no">취소하기</string>
+    <string name="disease_yes">확인하기</string>
+    <string name="text_checkBox">당뇨</string>
 
 </resources>

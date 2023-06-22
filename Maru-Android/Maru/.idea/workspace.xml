@@ -33,7 +33,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/dgsw8th71/.android/avd/Pixel_5_API_33.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/dgsw8th13/.android/avd/A31_API_31.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -67,11 +67,11 @@
         <option value="Kotlin File" />
         <option value="Kotlin Data Class" />
         <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="navigationResourceFile" />
         <option value="Kotlin Object" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -93,6 +93,7 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -118,6 +119,33 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "android-custom-view/Users/dgsw8th71/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout/2.1.4/27e12209e529970f69bc817f349c247ef238fae7/constraintlayout-2.1.4-sources.jar!/androidx/constraintlayout/widget/ConstraintLayout.java_SELECTED": "ConstraintLayout",
+    "android-custom-view/Users/dgsw8th71/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED": "RecyclerView",
+    "android-custom-view/Users/dgsw8th71/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.1.0/7ba5bcd622e3d6d7ab6b9833717c4385e4ba0a51/material-1.1.0-sources.jar!/com/google/android/material/floatingactionbutton/FloatingActionButton.java_SELECTED": "FloatingActionButton",
+    "android-custom-view/Users/dgsw8th71/Library/Android/sdk/sources/android-33/android/view/View.java_SELECTED": "View",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "ALL",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/dgsw8th13/Desktop/hacker/Travling/Maru-Android/Maru/presentation/src/main/java/com/traveling/presentation/features/onboard",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Suggestions",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> Stashed changes
   },
   &quot;keyToStringList&quot;: {
     &quot;android-custom-view/Users/dgsw8th71/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_RecyclerView_DIMENSIONS&quot;: [
@@ -137,11 +165,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard" />
       <recent name="$PROJECT_DIR$/presentation/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/presentation/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/onboard/drug" />
       <recent name="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/alarm" />
-      <recent name="$PROJECT_DIR$/presentation/src/main/java/com/traveling/presentation/features/main/food" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/presentation/src/main/res/drawable" />
