@@ -2,6 +2,7 @@ package com.traveling.presentation.features.main.food
 
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.traveling.presentation.R
 import com.traveling.presentation.base.BaseFragment
@@ -29,6 +30,20 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
         super.onStart()
         viewModel.loadFoods(mBinding.title.text.toString())
         initRecyclerView()
+        when (viewModel.mode.value) {
+            1 -> {
+                mBinding.level1.background = resources.getDrawable(R.drawable.level11_button)
+                mBinding.level1.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
+            }
+            2 -> {
+                mBinding.level2.background = resources.getDrawable(R.drawable.level22_button)
+                mBinding.level2.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
+            }
+            3 -> {
+                mBinding.level3.background = resources.getDrawable(R.drawable.level33_button)
+                mBinding.level3.setTextColor(ContextCompat.getColorStateList(requireContext(), R.color.white))
+            }
+        }
         with(mBinding) {
             level1.setOnClickListener {
                 viewModel.state.value = "1"
@@ -67,7 +82,11 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
     }
 
     private fun initRecyclerView() {
-        adapter = ListFoodAdapter(requireContext(), viewModel.foodList, mBinding.title.text.toString(), viewModel)
+        adapter = ListFoodAdapter(requireContext(), viewModel.foodList, viewModel) {
+                title, content ->
+            val action = FoodFragmentDirections.actionFoodFragmentToFoodDetailFragment(title, content, mBinding.title.text.toString(), viewModel.mode.value!!)
+            findNavController().navigate(action)
+        }
         with(mBinding) {
             rv.adapter = adapter
             rv.layoutManager = GridLayoutManager(context, 2)

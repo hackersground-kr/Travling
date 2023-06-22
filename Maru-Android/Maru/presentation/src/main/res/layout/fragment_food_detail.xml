@@ -9,6 +9,7 @@
             type="com.traveling.presentation.features.main.food.detail.FoodDetailViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/blue">
@@ -17,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="당뇨"
+            android:text="@={vm.md}"
             android:textColor="@color/white"
             android:gravity="center"
             android:textSize="45sp"
@@ -51,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="아보카도"
+                    android:text="@={vm.title}"
                     android:textSize="26sp"
                     android:textColor="@color/gray"
                     app:layout_constraintTop_toTopOf="@id/back"
@@ -75,10 +76,7 @@
                     android:layout_marginTop="20dp"
                     android:textColor="@color/gray"
                     android:textSize="20sp"
-                    android:text="아보카도는 맛있습니다.\n
-맛있는걸 먹으면 기분이 좋아집니다.\n
-기분이 좋아지면 건강도 좋아집니다.\n
-아보카도를 사드세요 제발!"
+                    android:text="@={vm.detail}"
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

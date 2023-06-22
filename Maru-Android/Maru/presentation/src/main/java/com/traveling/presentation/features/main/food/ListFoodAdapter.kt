@@ -12,10 +12,10 @@ import com.traveling.presentation.databinding.ListFoodBinding
 class ListFoodAdapter(
     private val context: Context,
     private val foodList: List<Food>,
-    private val mb: String,
-    private val viewModel: FoodViewModel
+    private val viewModel: FoodViewModel,
+    private val action: (String, String) -> (Unit)
 ): RecyclerView.Adapter<ListFoodAdapter.ViewHolder>() {
-    inner class ViewHolder(private val binding: ListFoodBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(binding: ListFoodBinding): RecyclerView.ViewHolder(binding.root) {
         val title = binding.title
         val detail = binding.detail
         val food = binding.color
@@ -24,7 +24,8 @@ class ListFoodAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(ListFoodBinding.inflate(LayoutInflater.from(parent.context), parent, false)).apply {
             itemView.setOnClickListener {
-
+                val food = foodList[adapterPosition]
+                action(food.foodname, food.foodcontent)
             }
         }
     }
@@ -37,7 +38,7 @@ class ListFoodAdapter(
         val foodBackground = holder.food
 
         when (viewModel.mode.value) {
-            1 -> foodBackground.setBackgroundColor(R.drawable.level1_button)
+            1 -> foodBackground.background = context.resources.getDrawable(R.drawable.level1_button)
             2 -> foodBackground.background = context.resources.getDrawable(R.drawable.level2_button)
             3 -> foodBackground.background = context.resources.getDrawable(R.drawable.level3_button)
         }
