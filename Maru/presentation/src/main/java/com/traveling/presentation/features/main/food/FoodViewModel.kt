@@ -19,13 +19,6 @@ class FoodViewModel @Inject constructor(
     val state = MutableLiveData("1")
     val md = MutableLiveData<String>("당뇨")
 
-    fun init() {
-        val result = MaruApplication.prefs.md1
-        if (!(result.isNotBlank() || result.isNotEmpty())) {
-            md.value = result.split(",")[0]
-        }
-    }
-
     val foodList = arrayListOf<Food>()
 
     fun loadFoods(type: String) {

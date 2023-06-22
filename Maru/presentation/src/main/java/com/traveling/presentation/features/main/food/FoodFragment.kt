@@ -55,7 +55,6 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
     }
     private fun reloadFoods(foods: List<Food>) {
         val len = viewModel.foodList.size
-        viewModel.addFoods(foods)
         if (len == 0) {
             viewModel.addFoods(foods)
             adapter.notifyItemRangeInserted(0, viewModel.foodList.size)
@@ -109,18 +108,13 @@ class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
 
     override fun onStart() {
         super.onStart()
-        viewModel.init()
-        reload()
         initRecyclerView()
         initOnClickListener()
         initOnClickMode()
-        initTitle()
-        Log.d(TAG, "${mBinding.title.text} - onStart() called")
-        viewModel.loadFoods(mBinding.title.text.toString())
-    }
-
-    private fun initTitle() {
+        viewModel.md.value = MaruApplication.prefs.md1.replace(" ", "").split(",")[0]
         mBinding.title.text = viewModel.md.value
+        reload()
+        mBinding.level1.performClick()
     }
 
     private fun reload() {
