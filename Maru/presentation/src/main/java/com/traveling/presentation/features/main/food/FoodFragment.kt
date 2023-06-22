@@ -21,7 +21,6 @@ import dagger.hilt.android.AndroidEntryPoint
  * 주의하세용
  */
 
-
 @AndroidEntryPoint
 class FoodFragment : BaseFragment<FragmentFoodBinding, FoodViewModel>() {
     override val viewModel: FoodViewModel by viewModels()

@@ -55,7 +55,7 @@ class HealthViewModel @Inject constructor(
             height.value = prefs.height
 
             md1.value!!.split(",").map {
-                diseaseMap.value!![it] = true
+                if (it.isNotEmpty()) diseaseMap.value!![it] = true
             }
         }
     }
