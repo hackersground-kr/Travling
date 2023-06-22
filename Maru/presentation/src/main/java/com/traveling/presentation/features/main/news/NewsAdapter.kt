@@ -10,23 +10,22 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.traveling.domain.parsing.Article
+import com.traveling.domain.parsing.news
 import com.traveling.presentation.R
 
-class NewsAdapter(private val newsList: List<Article>, private val activity: Activity) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
-
+class NewsAdapter(private val newsList: List<Article>, private val activity: Activity, private val callback: (String) -> Unit) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
+    val TAG: String = "로그"
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_news, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Log.d("엄어멍ㅁ", "onBindViewHolder: 아아ㅏ아")
         val newsTitle = newsList[position]
         holder.titleTextView.text = newsList[position].title
         holder.titleTextView.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW  , Uri.parse(newsList[position].url))
-            activity.startActivity(intent)
-
+            Log.d(TAG, "NewsAdapter - ${newsTitle.url.toString()}() called")
+            callback(newsTitle.url)
         }
     }
 

@@ -10,6 +10,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class WalkFragment : BaseFragment<FragmentWalkBinding, WalkViewModel>() {
     override val viewModel: WalkViewModel by viewModels()
     override fun observerViewModel() {
-
+        viewModel.startWalk()
     }
 }

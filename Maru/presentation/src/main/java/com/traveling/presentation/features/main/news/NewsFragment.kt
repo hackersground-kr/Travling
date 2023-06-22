@@ -1,6 +1,8 @@
 package com.traveling.presentation.features.main.news
 
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.util.Log
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.viewModels
@@ -40,7 +42,10 @@ class NewsFragment : BaseFragment<FragmentNewsBinding, NewsViewModel>() {
 
     }
     private fun initRecyclerView() {
-        adapter = NewsAdapter(viewModel.newsList, Activity())
+        adapter = NewsAdapter(viewModel.newsList, Activity()) {
+            val intent = Intent(Intent.ACTION_VIEW  , Uri.parse(it))
+            requireActivity().startActivity(intent)
+        }
         with(mBinding) {
             newsRv.adapter = adapter
             newsRv.layoutManager = LinearLayoutManager(context)

@@ -45,7 +45,18 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:gravity="center"
-                    android:text="@={vm.walkCount} 걸음"
+                    android:text="@={vm.walkCount}"
+                    android:textColor="@color/gray"
+                    android:textSize="24sp"/>
+                <TextView
+                    android:id="@+id/walk_count_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/total"
+                    app:layout_constraintStart_toEndOf="@id/walk_count_text"
+                    app:layout_constraintBottom_toBottomOf="@id/walk_count_text"
+                    android:gravity="center"
+                    android:text="걸음"
                     android:textColor="@color/gray"
                     android:textSize="16sp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -90,7 +101,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_margin="20dp"
-                        android:text="12,123걸음"
+                        android:text="@={vm.walkCount}"
                         android:textColor="@color/gray"
                         android:textSize="14sp"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -130,7 +141,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_margin="20dp"
-                        android:text="129kcal"
+                        android:text="@={vm.kcal}"
                         android:textColor="@color/gray"
                         android:textSize="14sp"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
