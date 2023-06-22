@@ -136,8 +136,38 @@
         그다음 뜨는 창에서 Maru-Backend를 클릭해요
     13. https://portal.azure.com/#home 에 들어가서 보이는 처음 웹앱 생성하기에서 정한 이름의 프로젝트를 클릭합니다.
     14. 오른쪽 기본도메인이라 적힌 url을 복사합니다. 잘 보관하세요
-  
-
+       
+   > **MySQL에 테이블 불러오기**
+> 
+- Step by Step
+    1. [여기를 클릭](https://github.com/hackersground-kr/Travling/releases/download/1.0.1/database_json.zip)하여 데이터 베이스 추출 파일을 받아요
+    2. 압축을 풀고 여기를 클릭해 [MySQL Workbench](https://downloads.mysql.com/archives/get/p/8/file/mysql-workbench-community-8.0.30-macos-x86_64.dmg) for Mac을 설치해요
+    3. MySQL Workbench를 열고, MySQL Connections 옆의 + 를 클릭해요
+    4. Connection Name에는 원하는 이름을 적어요
+    5. Hostname에 (DB 서버 이름).mysql.database.azure.com을 적어요
+    6. Username에 DB 서버의 서버 관리자 로그인 이름을 적어요
+    7. Password는 DB 서버를 만들 때 사용했던 비밀번호를 입력해요
+    8. Ok를 누른 후, DB 서버를 클릭하여 접속을 확인해요
+    9. food DB의 Tables에서 오른쪽 클릭하여 Create Table을 눌러요
+    10. Name은 dm으로 설정해요.
+    11. <click to edit> 을 클릭 후 id를 입력하고, PK NM AI 체크를 표시해요
+    12. 아래의 <click to edit>을 눌러 새로운 칼럼을 추가하고 danger를 추가해요
+    13. danger의 데이터 타입을 INT로 설정해요
+    14. 이러한 방법으로 데이터 타입이 STRING인 칼럼
+        
+        foodname, foodcontent, foodtype을 생성해요
+        
+    15. 아래의 Apply 버튼을 누르고 다시 누르고, Close를 눌러요
+    16. 생성된 dm 테이블을 오른쪽 클릭하여 Table Data Import Wizard를 눌러요
+    17. Browse를 클릭하여 압축 푼 데이터베이스 폴더에서 user_dm.json을 선택해요
+    18. Use existing table을 누르고 food.dm을 클릭해요
+    19. Next를 누르고 다시 Next를 누르고 다시 눌러야 해요
+    20. Next를 누르고 Finish를 눌러요
+    21. 요소를 불러온 dm 테이블을 오른쪽 클릭하여 Table Data Import Wizard를 눌러요
+    22. Browse를 누르고 압춘 푼 데이터 베이스 폴더에서 user_hbp.json을 선택해요
+    23. Create new table을 누르고 food DB를 선택후 hbp를 입력해요
+    24. Next를 눌러요 Next를 눌러요 Next를 눌러요 Next를 눌러요 Finish를 눌러요
+    25. 위 방식으로 user_mi.json를 데이터 베이스에 저장해요
 
 
 
