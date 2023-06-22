@@ -9,5 +9,5 @@
     <dimen name="settingMargin">35dp</dimen>
     <dimen name="settingArrow">355dp</dimen>
     <dimen name="titleLock">60sp</dimen>
-    <dimen name="text_realhistory">의료 기록 : 맹장수술</dimen>
+
 </resources>

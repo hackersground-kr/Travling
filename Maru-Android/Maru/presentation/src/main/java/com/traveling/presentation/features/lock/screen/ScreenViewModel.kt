@@ -9,9 +9,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.util.Calendar
+import javax.inject.Inject
 
 @HiltViewModel
-class ScreenViewModel: BaseViewModel() {
+class ScreenViewModel @Inject constructor()
+    : BaseViewModel() {
 
     fun getCurrentTime(): String {
         val calendar = Calendar.getInstance()
