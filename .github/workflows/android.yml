@@ -28,10 +28,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
       
-    - name: Test
-      run: ls -a
-      
     - uses: actions/upload-artifact@v3
       with:
         name: Maru-Android
-        path: output
+        path: ./build
