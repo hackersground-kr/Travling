@@ -245,7 +245,7 @@
 ## 안드로이드
 
 
-1. 위에 과정에서 얻은 url을 가져옵니다.
+1. 위의 백엔드 구축 과정에서 잘 보관하라고 했던 도메인 즉 url을 가져옵니다. [메모장 기록 필수]
 2. [링크](https://github.com/hackersground-kr/Travling/archive/refs/heads/LKH-ANDROID.zip) 를 클릭하여 해당 파일을 다운로드합니다. 그후 압축을 해제합니다.
 3. 안드로이드 스튜디오를 실행합니다.
 4. 오른쪽 상단의 Open버튼을 누릅니다.
@@ -256,7 +256,7 @@
 7. 그후 아래의 사진처럼 생긴 것중 망치모양 버튼을 누릅니다.
 ![gradle](https://github.com/hackersground-kr/Travling/blob/main/images/gradle.png?raw=true)
 8. 모두 눌렀다면 presentation/java/com/traveling/presentation/di/NetworkModule 파일을 엽니다.
-9. 그 후 61번쨰 줄의 url을 **1번의 URL**로 변경한다.
+9. 그 후 67번쨰 줄의 url을 **1번의 URL**로 변경한다.
 ![folder](https://github.com/hackersground-kr/Travling/blob/main/images/network.png?raw=true)
 10. 그후 상단의 빌드 버튼을 누르고 Build Bundle(s) / APK(s)에 마우스를 갖다대고 Build apk(s)를 누릅니다.
 ![apk](https://github.com/hackersground-kr/Travling/blob/main/images/buildapk.png?raw=true)
